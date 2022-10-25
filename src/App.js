@@ -1,14 +1,8 @@
-import data from "./utils/data.json";
+import data from "./assets/data/data";
+import Layout from "./components/Layout/Layout";
 
 function App() {
-  const { TrangDiem } = data;
-
-  console.log(data);
-
-  new Promise((resolve, reject) => {
-    setTimeout(() => resolve("data"), Math.random() * 200);
-  });
-  return <div className="App"></div>;
+  return <Layout />;
 }
 
 export default App;

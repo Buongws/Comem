@@ -5,14 +5,15 @@ import { FaShoppingBag, FaUser } from "react-icons/fa";
 import "../../index.css";
 
 import { links } from "../../assets/data/links";
+
 const Header = () => {
   return (
     <header className="relative top-0 left-0 right-0 bg-[url('/src/assets/image/background.jpg')]">
-      <div className="nav-center pt-[10px] pb-[10px]">
-        <div className="header-top flex items-center justify-between pr-[20px] pl-[20px] ">
+      <div className="nav-center">
+        <div className="header-top flex items-center justify-between pr-[20px] pl-[20px] max-w-[80%] w-[100%] m-auto">
           <div className="header-logo">
             <Link to="/" className="">
-              <img className=" w-[200px]" src={logo} alt="logo" />
+              <img className=" w-[200px] h-[150px]" src={logo} alt="logo" />
             </Link>
           </div>
           <div className="header-nav-links">
@@ -43,7 +44,6 @@ const Header = () => {
             </button>
           </div>
         </div>
-        <div className="header-item"></div>
       </div>
     </header>
   );

@@ -1,4 +1,4 @@
-const data = [
+export const datas = [
   {
     id: 11120,
     name: "Nước Tẩy Trang Rau Má Dành Cho Da Dầu Mụn",
@@ -210,7 +210,7 @@ const data = [
     ],
     colors: ["Màu hồng", "Màu vàng", "Màu Tím"],
     rating: 4,
-    category: "da",
+    category: "Da",
     brand: "duongam",
     BestSeller: true,
     max: 11,
@@ -256,7 +256,7 @@ const data = [
     ],
     colors: ["Màu hồng", "Màu vàng", "Màu Tím"],
     rating: 4,
-    category: "da",
+    category: "Da",
     brand: "taytrang",
     BestSeller: true,
     max: 11,
@@ -302,7 +302,7 @@ const data = [
     ],
     colors: ["Màu hồng", "Màu Tím"],
     rating: 5,
-    category: "da",
+    category: "Da",
     brand: "ruamat",
     BestSeller: false,
     max: 30,
@@ -347,7 +347,7 @@ const data = [
     ],
     colors: ["Màu Vàng", "Màu Đỏ"],
     rating: 5,
-    category: "da",
+    category: "Da",
     brand: "serum",
     BestSeller: true,
     max: 31,
@@ -1115,5 +1115,3 @@ const data = [
     },
   },
 ];
-
-export default data;

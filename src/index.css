@@ -39,22 +39,31 @@ h2 {
 ul {
   list-style: none;
 }
-
+li {
+  color: #ebffe3;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
 a {
   text-decoration: none;
   color: unset;
 }
-
+.container {
+  margin: 0 auto;
+  max-width: 80%;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
 /* HOVER UNDERLINE */
-
 
 .nav-links {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
   text-decoration: none;
   color: #ffffff;
-  padding: 20px 0px;
+  padding: 15px 0px;
   margin: 0px 20px;
   display: inline-block;
   position: relative;
@@ -80,4 +89,14 @@ a {
 
 .nav-link-ltr:hover::before {
   width: 100%;
+}
+/* FOOTER */
+.footer-site {
+  background-color: #738136;
+  padding: 40px 0;
+}
+a:hover {
+  opacity: 1;
+  color: #ffffff;
+  transition: all 0.5s ease-in-out;
 }

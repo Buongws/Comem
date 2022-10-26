@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/image/logo_co_mem_1565603099.png";
+import { FaShoppingBag, FaUser } from "react-icons/fa";
+import "../../index.css";
 
 import { links } from "../../assets/data/links";
 const Header = () => {
@@ -19,22 +21,26 @@ const Header = () => {
                 const { id, text, url } = link;
                 return (
                   <li key={id} className="text-white m-[20px]">
-                    <Link to={url}>{text}</Link>
+                    <Link to={url} className="nav-links nav-link-ltr">
+                      {text}
+                    </Link>
                   </li>
                 );
               })}
             </ul>
           </div>
-          <div>
-            <Link to="/cart" className="cart-btn flex items-center w-[225px] ">
-              cart
-              <span className="cart-container flex items-center relative ">
-                <i class="ri-shopping-cart-line"></i>
-                <span className="cart-value absolute top-[-10px] right-[-18px] w-[16px] h-[16px] flex items-center justify-center bg-orange-300 rounded-full p-[15px] text-xs opacity-50 text-white">
+          <div className="flex justify-between items-center">
+            <Link to="/cart" className="cart-btn flex items-center mr-[30px] ">
+              <span className="cart-container flex items-center relative  ">
+                <FaShoppingBag className="text-white w-[28px] h-[28px]" />
+                <span className="cart-value absolute top-[-16px] right-[-18px] w-[16px] h-[16px] flex items-center justify-center bg-orange-300 rounded-full p-[15px] text-xs  text-white">
                   15
                 </span>
               </span>
             </Link>
+            <button type="button" className="mr-[30px] ">
+              <FaUser className="text-white w-[28px] h-[28px]" />
+            </button>
           </div>
         </div>
         <div className="header-item"></div>

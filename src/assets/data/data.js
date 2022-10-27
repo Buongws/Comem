@@ -24,7 +24,7 @@ export const datas = [
     rating: 3,
     category: "trangdiem",
     brand: "nuoctaytrang",
-    BestSeller: false,
+    bestSeller: false,
     max: 20,
     thumbnails: {
       description: [
@@ -70,7 +70,7 @@ export const datas = [
     rating: 4,
     category: "trangdiem",
     brand: "kemma",
-    BestSeller: true,
+    bestSeller: true,
     max: 16,
     thumbnails: {
       description: [
@@ -116,7 +116,7 @@ export const datas = [
     rating: 3,
     category: "trangdiem",
     brand: "son",
-    BestSeller: false,
+    bestSeller: false,
     max: 17,
     thumbnails: {
       description: [
@@ -162,7 +162,7 @@ export const datas = [
     rating: 5,
     category: "trangdiem",
     brand: "son",
-    BestSeller: false,
+    bestSeller: false,
     max: 15,
     thumbnails: {
       description: [
@@ -212,7 +212,7 @@ export const datas = [
     rating: 4,
     category: "Da",
     brand: "duongam",
-    BestSeller: true,
+    bestSeller: true,
     max: 11,
     thumbnails: {
       description: [
@@ -258,7 +258,7 @@ export const datas = [
     rating: 4,
     category: "Da",
     brand: "taytrang",
-    BestSeller: true,
+    bestSeller: true,
     max: 11,
     thumbnails: {
       description: [
@@ -304,7 +304,7 @@ export const datas = [
     rating: 5,
     category: "Da",
     brand: "ruamat",
-    BestSeller: false,
+    bestSeller: false,
     max: 30,
     thumbnails: {
       description: [
@@ -349,7 +349,7 @@ export const datas = [
     rating: 5,
     category: "Da",
     brand: "serum",
-    BestSeller: true,
+    bestSeller: true,
     max: 31,
     thumbnails: {
       description: [
@@ -396,7 +396,7 @@ export const datas = [
     rating: 5,
     category: "cothe",
     brand: "xabong",
-    BestSeller: false,
+    bestSeller: false,
     max: 14,
     thumbnails: {
       description: [
@@ -442,7 +442,7 @@ export const datas = [
     rating: 4,
     category: "cothe",
     brand: "xabong",
-    BestSeller: false,
+    bestSeller: false,
     max: 11,
     thumbnails: {
       description: [
@@ -488,7 +488,7 @@ export const datas = [
     rating: 4,
     category: "cothe",
     brand: "xabong",
-    BestSeller: true,
+    bestSeller: true,
     max: 12,
     thumbnails: {
       description: [
@@ -538,7 +538,7 @@ export const datas = [
     rating: 5,
     category: "cothe",
     brand: "xabong",
-    BestSeller: false,
+    bestSeller: false,
     max: 20,
     thumbnails: {
       description: [
@@ -585,7 +585,7 @@ export const datas = [
     rating: 5,
     category: "huongthom",
     brand: "tinhdau",
-    BestSeller: false,
+    bestSeller: false,
     max: 15,
     thumbnails: {
       description: [
@@ -631,7 +631,7 @@ export const datas = [
     rating: 4,
     category: "huongthom",
     brand: "tinhdau",
-    BestSeller: false,
+    bestSeller: false,
     max: 11,
     thumbnails: {
       description: [
@@ -677,7 +677,7 @@ export const datas = [
     rating: 5,
     category: "huongthom",
     brand: "tinhdau",
-    BestSeller: false,
+    bestSeller: false,
     max: 15,
     thumbnails: {
       description: [
@@ -723,7 +723,7 @@ export const datas = [
     rating: 5,
     category: "huongthom",
     brand: "nuochoa",
-    BestSeller: false,
+    bestSeller: false,
     max: 28,
     thumbnails: {
       description: [
@@ -770,7 +770,7 @@ export const datas = [
     rating: 5,
     category: "quatang",
     brand: "hopqua",
-    BestSeller: true,
+    bestSeller: true,
     max: 10,
     thumbnails: {
       description: [
@@ -816,7 +816,7 @@ export const datas = [
     rating: 5,
     category: "quatang",
     brand: "hopqua",
-    BestSeller: true,
+    bestSeller: true,
     max: 15,
     thumbnails: {
       description: [
@@ -862,7 +862,7 @@ export const datas = [
     rating: 4,
     category: "quatang",
     brand: "hopqua",
-    BestSeller: false,
+    bestSeller: false,
     max: 15,
     thumbnails: {
       description: [
@@ -908,7 +908,7 @@ export const datas = [
     rating: 5,
     category: "quatang",
     brand: "hopqua",
-    BestSeller: false,
+    bestSeller: false,
     max: 30,
     thumbnails: {
       description: [
@@ -955,7 +955,7 @@ export const datas = [
     rating: 4,
     category: "khac",
     brand: "tuivai",
-    BestSeller: false,
+    bestSeller: false,
     max: 20,
     thumbnails: {
       description: [
@@ -1001,7 +1001,7 @@ export const datas = [
     rating: 5,
     category: "khac",
     brand: "trarauma",
-    BestSeller: true,
+    bestSeller: true,
     max: 15,
     thumbnails: {
       description: [
@@ -1047,7 +1047,7 @@ export const datas = [
     rating: 5,
     category: "khac",
     brand: "tuinho",
-    BestSeller: true,
+    bestSeller: true,
     max: 5,
     thumbnails: {
       description: [
@@ -1093,7 +1093,7 @@ export const datas = [
     rating: 5,
     category: "khac",
     brand: "tuinho",
-    BestSeller: true,
+    bestSeller: true,
     max: 5,
     thumbnails: {
       description: [

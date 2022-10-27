@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap");
 /* reset browser default */
+
 * {
   margin: 0;
   padding: 0;
@@ -26,14 +27,25 @@ p {
   margin: 0;
 }
 
+h1 {
+  font-size: 10rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+h5 {
+  font-size: 0.875rem;
+}
+
 p {
   color: white;
   font-size: 1rem;
-}
-
-h1,
-h2 {
-  font-size: var(--heading-fontSize);
 }
 
 ul {
@@ -56,9 +68,23 @@ a {
   width: 100%;
 }
 
-.container-common{
+.container-small {
   margin: 0 auto;
-  max-width: 90%;
+  max-width: 50%;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+.container-medium {
+  margin: 0 auto;
+  max-width: 65%;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+.container-big {
+  margin: 0 auto;
+  max-width: 95%;
   padding-left: 15px;
   padding-right: 15px;
   width: 100%;
@@ -107,4 +133,47 @@ a:hover {
   opacity: 1;
   color: #ffffff;
   transition: all 0.5s ease-in-out;
+}
+
+/*  */
+.page-100 {
+  min-height: calc(100vh - 10rem);
+  padding: 5rem 0;
+}
+.btn {
+  text-transform: uppercase;
+  background: #e67e22;
+  padding: 15px 50px;
+  letter-spacing: 0.1rem;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.3s linear;
+  font-size: 0.875rem;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-color: transparent;
+  border-radius: 100px;
+}
+.btn:hover {
+  color: white;
+  background: #d26e16;
+}
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+.slick-list {
+  margin: 0 -10px;
+}
+.card-bot {
+  margin: 10px 20px;
+}
+
+.button {
+  margin-top: 20px;
+  margin-top: auto;
+  color: #d35400;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }

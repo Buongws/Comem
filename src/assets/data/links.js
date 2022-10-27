@@ -16,7 +16,7 @@ export const links = [
   },
   {
     id: 4,
-    text: "Hệ Thống Cửa Hàng",
+    text: "Cửa Hàng",
     url: "/dia-chi-cua-hang",
   },
 ];

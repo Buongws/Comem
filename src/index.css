@@ -55,17 +55,25 @@ a {
   padding-right: 15px;
   width: 100%;
 }
+
+.container-common{
+  margin: 0 auto;
+  max-width: 90%;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
 /* HOVER UNDERLINE */
 
 .nav-links {
-  font-weight: bold;
-  font-size: 16px;
-  text-transform: uppercase;
+  /* font-weight: bold; */
+  font-size: 20px;
+  /* text-transform: uppercase; */
   text-decoration: none;
   color: #ffffff;
   padding: 15px 0px;
   margin: 0px 20px;
-  display: inline-block;
+  display: block;
   position: relative;
   opacity: 0.75;
 }

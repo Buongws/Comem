@@ -2,7 +2,6 @@ import React from "react";
 import {
   banderAbout,
   hoa1,
-  hoa2,
   hoa3,
   hoa4,
   hoa5,

@@ -1,86 +1,41 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 import { formatPrice } from "../../utils/Help";
 import { Link } from "react-router-dom";
 
 import { datas } from "../../assets/data/data";
 
 const FeaturedProducts = () => {
-  const settings = {
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 3,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
   return (
-    <div className="container">
-      <div className="title">
-        <h2> Feature products</h2>
+    <div className="container pt-[60px] text-center ">
+      <div className="title ">
+        <h2 className="mb-[30px] font-semibold text-[#4c503d]">
+          SẢN PHẨM ƯU ĐÃI{" "}
+        </h2>
         <div className="underline"></div>
       </div>
-      <div className="section-center ">
-        <Slider {...settings}>
-          {datas
-            .filter((data) => data.bestSeller === true)
-            .map((item) => {
-              return (
-                <div
-                  className="card border-solid border-[1px] h-[400px] rounded-[10px] hover:shadow-lg ease-in-out
-
-                "
-                >
-                  <div className="card-top p-[30px]">
-                    <img
-                      src={item.image[0]}
-                      alt={item.name}
-                      className=" object-cover"
-                    />
-                  </div>
-                  <div className="card-bot self-start mt-auto">
-                    <h2 className="text-[16.5px]">{`${item.name.substring(
-                      0,
-                      30
-                    )}...`}</h2>
-                    <button className="button">
-                      {formatPrice(item.price)}
-                    </button>
-                  </div>
+      <div className="section-center text-black gap-[30px] grid grid-cols-4 m-auto max-lg:grid-cols-2 max-sm:grid-cols-1 ">
+        {datas
+          .filter((data) => data.bestSeller === true)
+          .map((item) => {
+            return (
+              <div className="card border-solid border-[1px] rounded-[10px] hover:shadow-lg ease-in-out flex flex-col">
+                <div className="pb-[10%] bg-cover">
+                  <img src={item.image[0]} alt={item.name} />
                 </div>
-              );
-            })}
-        </Slider>
+                <div className="p-[20px] flex-1 flex flex-col justify-between">
+                  <h2 className="text-[16.5px] mb-[15px] font-medium">
+                    {`${item.name.substring(0, 45)}...`}
+                  </h2>
+                  <button className="btn pt-[10px]">
+                    {formatPrice(item.price)}
+                  </button>
+                </div>
+              </div>
+            );
+          })}
       </div>
-      <Link to="/products" className="btn">
+      <Link to="/products" className="btn mt-[30px]">
         all product
       </Link>
     </div>

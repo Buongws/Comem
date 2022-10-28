@@ -8,6 +8,8 @@ import hoa2 from "./hoa2.png";
 import hoa3 from "./hoa3.jpg";
 import hoa4 from "./hoa4.jpg";
 import hoa5 from "./hoa5.png";
+import comemBig from "./chuyencuaco.jpg";
+import comemSmall from "./chuyencuaco-small.jpg";
 
 export {
   Slide1,
@@ -20,4 +22,6 @@ export {
   hoa3,
   hoa4,
   hoa5,
+  comemSmall,
+  comemBig,
 };

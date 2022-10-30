@@ -109,11 +109,11 @@ a {
 }
 
 .nav-links::before {
-  transition: 300ms;
-  height: 3px;
   content: "";
-  position: absolute;
   background-color: #ffffff;
+  position: absolute;
+  height: 3px;
+  transition: 300ms;
 }
 
 .nav-link-ltr::before {
@@ -144,7 +144,7 @@ a:hover {
   text-transform: uppercase;
   color: white;
   background: #e67e22;
-  padding: 15px 50px;
+  padding: 13px 50px;
   letter-spacing: 0.1rem;
   display: inline-block;
   font-weight: 500;
@@ -156,6 +156,25 @@ a:hover {
   border-radius: 100px;
 }
 .btn:hover {
+  background: #738136;
+}
+
+.btnResource {
+  text-transform: uppercase;
+  color: #738136;
+  background: #e7edd7;
+  padding: 13px 40px;
+  letter-spacing: 0.1rem;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.3s linear;
+  font-size: 0.875rem;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-color: transparent;
+  border-radius: 10px;
+}
+.btnResource:hover {
   /* color: #738136; */
   background: #738136;
 }

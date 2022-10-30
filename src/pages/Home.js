@@ -5,6 +5,7 @@ import {
   Service,
   ShipCod,
   Sliders,
+  HomeResource,
 } from "../components/HomePage/indexHomePage";
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <ShipCod />
       <FeaturedProducts />
       <Service />
+      <HomeResource />
       <Contact />
     </main>
   );

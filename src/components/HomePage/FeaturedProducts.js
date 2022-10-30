@@ -20,7 +20,7 @@ const FeaturedProducts = () => {
           .map((item) => {
             return (
               <div className="card border-solid border-[1px] rounded-[10px] hover:shadow-lg ease-in-out flex flex-col">
-                <div className="pb-[10%] bg-cover">
+                <div className="pb-[10%]">
                   <img src={item.image[0]} alt={item.name} />
                 </div>
                 <div className="p-[20px] flex-1 flex flex-col justify-between">

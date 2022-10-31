@@ -224,3 +224,20 @@ a:hover {
   left: -8%;
   border-radius: 10px;
 }
+.mobile_menu {
+  cursor: pointer;
+}
+.mobile_menu {
+  font-weight: 600;
+  display: none;
+}
+
+.header_shrink {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  /* background: #fff; */
+  z-index: 99999;
+  box-shadow: 5px 5px 15px -5px #fde4e4;
+}

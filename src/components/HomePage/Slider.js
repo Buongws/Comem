@@ -7,7 +7,7 @@ import HeroSlider, { Slide, MenuNav } from "hero-slider";
 const Sliders = () => {
   return (
     <HeroSlider
-      height={"60vh"}
+      height={"70vh"}
       autoplay
       controller={{
         initialSlide: 1,

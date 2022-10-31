@@ -1,14 +1,32 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/image/logo_co_mem_1565603099.png";
-import { FaShoppingBag, FaUser } from "react-icons/fa";
+import { FaShoppingBag, FaUser, FaBars } from "react-icons/fa";
 import "../../index.css";
 
 import { links } from "../../assets/data/links";
 
 const Header = () => {
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (
+        document.body.scrollTop > 100 ||
+        document.documentElement.scrollTop > 100
+      ) {
+        headerRef.current.classList.add("header_shrink");
+      } else {
+        headerRef.current.classList.remove("header_shrink");
+      }
+    });
+  }, []);
+
   return (
-    <header className="relative top-0 left-0 right-0 bg-[url('/src/assets/image/background.jpg')]">
+    <header
+      className="relative top-0 left-0 right-0 bg-[url('/src/assets/image/background.jpg')]"
+      ref={headerRef}
+    >
       <div className="nav-center">
         <div className="header-top flex items-center justify-between pr-[20px] pl-[20px] max-w-[80%] w-[100%] m-auto">
           <div className="header-logo">
@@ -45,6 +63,9 @@ const Header = () => {
             <button type="button" className="mr-[30px] ">
               <FaUser className="text-white w-[28px] h-[28px]" />
             </button>
+            <span className="mobile_menu">
+              <FaBars className="text-white w-[28px] h-[28px] " />
+            </span>
           </div>
         </div>
       </div>

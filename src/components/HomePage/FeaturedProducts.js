@@ -19,7 +19,7 @@ const FeaturedProducts = () => {
           .filter((data) => data.bestSeller === true)
           .map((item) => {
             return (
-              <div className="card border-solid border-[1px] rounded-[10px] hover:shadow-lg ease-in-out flex flex-col">
+              <div className="card border-solid border-[1px] rounded-[10px] hover:shadow-lg hover:scale-110 ease-in-out flex flex-col">
                 <div className="pb-[10%]">
                   <img src={item.image[0]} alt={item.name} />
                 </div>
@@ -27,9 +27,9 @@ const FeaturedProducts = () => {
                   <h2 className="text-[16.5px] mb-[15px] font-medium">
                     {`${item.name.substring(0, 45)}...`}
                   </h2>
-                  <button className="btn pt-[10px]">
+                  <Link to={`/products/${item.id}`} className="btn pt-[10px]">
                     {formatPrice(item.price)}
-                  </button>
+                  </Link>
                 </div>
               </div>
             );

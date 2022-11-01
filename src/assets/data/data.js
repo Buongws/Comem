@@ -1,9 +1,10 @@
 export const datas = [
   {
     id: "11120",
+    review: "320",
     name: "Nước Tẩy Trang Rau Má Dành Cho Da Dầu Mụn",
     price: 12000,
-    titleTag: ["Làm sạch nhanh", "dịu nhẹ", "ngăn ngừa mụn"],
+    titleTag: "Làm sạch nhanh, dịu nhẹ, ngăn ngừa mụn",
 
     image: [
       "https://static.comem.vn/uploads/October2022/nuoc-tay-trang-rau-ma_sp2x.jpg",
@@ -21,7 +22,7 @@ export const datas = [
       "Dưỡng môi Hết khô nẻ, hồng hào tự nhiên",
       "Đa năng Son lót, son dưỡng, mặt nạ ngủ, bôi nẻ má",
     ],
-    rating: 3,
+    rating: 3.5,
     category: "Trang Điểm",
     brand: "nuoctaytrang",
     bestSeller: false,
@@ -47,9 +48,10 @@ export const datas = [
   },
   {
     id: "11121",
+    review: "321",
     name: "Kem Má Hồng Hây Hây",
     price: 12000,
-    titleTag: ["Trang điểm gò má", "nổi bật gương mặt"],
+    titleTag: "Trang điểm gò má ,nổi bật gương mặt",
 
     image: [
       "https://static.comem.vn/uploads/June2022/kem-ma-hong-hay-hay-co-mem_sp2x.jpg",
@@ -67,7 +69,7 @@ export const datas = [
       "Đa năng Son lót, son dưỡng, mặt nạ ngủ, bôi nẻ má",
     ],
     colors: ["Màu hồng", "Màu vàng"],
-    rating: 4,
+    rating: 4.5,
     category: "Trang Điểm",
     brand: "kemma",
     bestSeller: true,
@@ -93,9 +95,10 @@ export const datas = [
   },
   {
     id: "11122",
+    review: "322",
     name: "Lip Scrub Môi Hồng Ngăn Ngừa Môi Thâm, Hồng Tự Nhiên",
     price: 130000,
-    titleTag: ["Giúp môi hồng mềm mịn", "ngăn ngừa thâm môi"],
+    titleTag: "Giúp môi hồng mềm mịn, ngăn ngừa thâm môi",
 
     image: [
       "https://static.comem.vn/uploads/October2022/nuoc-tay-trang-rau-ma_sp2x.jpg",
@@ -139,9 +142,10 @@ export const datas = [
   },
   {
     id: "11123",
+    review: "323",
     name: "Son Kem Nhung - Lì Mượt Không Silicon",
     price: 160000,
-    titleTag: ["Không chì", "Hợp nhiều màu da"],
+    titleTag: "Không chì ,Hợp nhiều màu da",
 
     image: [
       "https://static.comem.vn/uploads/October2021/31_do_thuan_sp2x.jpg",
@@ -186,12 +190,11 @@ export const datas = [
 
   {
     id: "11124",
+    review: "313",
     name: "Kem Dưỡng Ẩm Ngừa Lão Hóa Tơ Tằm - Dưỡng Ẩm Chuyên Sâu Với Coenzym Q10",
     price: 315000,
-    titleTag: [
-      "Kem dưỡng ẩm ngừa lão hóa bổ sung HA",
-      "Niacinamide cho làn da căng mịn tươi trẻ",
-    ],
+    titleTag:
+      "Kem dưỡng ẩm ngừa lão hóa bổ sung HA, Niacinamide cho làn da căng mịn tươi trẻ",
 
     image: [
       "https://static.comem.vn/uploads/July2022/kem-duong-am-to-tam_sp2x.jpg",
@@ -209,7 +212,7 @@ export const datas = [
       "Bổ sung Dầu Marula chống lão hóa tuyệt vời",
     ],
     colors: ["Màu hồng", "Màu vàng", "Màu Tím"],
-    rating: 4,
+    rating: 4.5,
     category: "Da",
     brand: "duongam",
     bestSeller: true,
@@ -235,9 +238,10 @@ export const datas = [
   },
   {
     id: "11125",
+    review: "523",
     name: "Nước Tẩy Trang Rau Má Dành Cho Da Dầu Mụn",
     price: 179000,
-    titleTag: ["Làm sạch nhanh", "dịu nhẹ", "ngăn ngừa mụn"],
+    titleTag: "Làm sạch nhanh, dịu nhẹ, ngăn ngừa mụn",
 
     image: [
       "https://static.comem.vn/uploads/October2022/nuoc-tay-trang-rau-ma_sp2x.jpg",
@@ -281,9 +285,10 @@ export const datas = [
   },
   {
     id: "11126",
+    review: "321",
     name: "Nước Tẩy Trang Rau Má Dành Cho Da Dầu Mụn",
     price: 149000,
-    titleTag: ["An toàn cho da nhạy cảm", "dịu nhẹ", "ngăn ngừa mụn"],
+    titleTag: "An toàn cho da nhạy cảm, dịu nhẹ, ngăn ngừa mụn",
 
     image: [
       "https://static.comem.vn/uploads/February2022/ANH_SP_BO_CHAM_SOC_DA_TO_TAM_sp2x.jpg",
@@ -326,9 +331,10 @@ export const datas = [
   },
   {
     id: "11127",
+    review: "543",
     name: "Nước Tẩy Trang Rau Má Dành Cho Da Dầu Mụn",
     price: 156000,
-    titleTag: ["An toàn cho da nhạy cảm", "dịu nhẹ", "ngăn ngừa mụn"],
+    titleTag: "An toàn cho da nhạy cảm, dịu nhẹ, ngăn ngừa mụn",
 
     image: [
       "https://static.comem.vn/uploads/July2022/serum-ha-cap-am_sp2x.jpg",
@@ -346,7 +352,7 @@ export const datas = [
       "hông chứa sulfate, paraben, silicone, hương liệu hóa học",
     ],
     colors: ["Màu Vàng", "Màu Đỏ"],
-    rating: 5,
+    rating: 2.5,
     category: "Da",
     brand: "serum",
     bestSeller: true,
@@ -373,9 +379,10 @@ export const datas = [
 
   {
     id: "11128",
+    review: "333",
     name: "Xà Bông Hữu Cơ Hương Nước Hoa (Tặng Túi Tạo Bọt)",
     price: 135000,
-    titleTag: ["Ngọt ngào", "dịu nhẹ", " lãng mạn"],
+    titleTag: "Ngọt ngào, dịu nhẹ,  lãng mạn",
 
     image: [
       "https://static.comem.vn/uploads/November2021/6_56_sp2x.jpg",
@@ -419,9 +426,10 @@ export const datas = [
   },
   {
     id: "11129",
+    review: "444",
     name: "Xà Bông Thiên Nhiên Hương Thảo Mộc (Tặng Túi Tạo Bọt)",
     price: 130000,
-    titleTag: ["Sản phẩm TẮM an lành nhất", "dịu nhẹ", " lãng mạn"],
+    titleTag: "Sản phẩm TẮM an lành nhất, dịu nhẹ, lãng mạn",
 
     image: [
       "https://static.comem.vn/uploads/November2021/6_56_sp2x.jpg",
@@ -439,7 +447,7 @@ export const datas = [
       "hông chứa sulfate, paraben, silicone, hương liệu hóa học",
     ],
     colors: ["Màu Đen", "Màu Đỏ", "Màu Hồng", "Màu Vàng"],
-    rating: 4,
+    rating: 3,
     category: "Cơ thể",
     brand: "xabong",
     bestSeller: false,
@@ -465,9 +473,10 @@ export const datas = [
   },
   {
     id: "11130",
+    review: "532",
     name: "Xà Bông Thiên Nhiên Hương Thảo Mộc (Tặng Túi Tạo Bọt)",
     price: 130000,
-    titleTag: ["Sản phẩm TẮM an lành nhất", "dịu nhẹ", " lãng mạn"],
+    titleTag: "Sản phẩm TẮM an lành nhất, dịu nhẹ,  lãng mạn",
 
     image: [
       "https://static.comem.vn/uploads/November2021/14_sp2x.jpg",
@@ -511,13 +520,11 @@ export const datas = [
   },
   {
     id: "11131",
+    review: "12",
     name: "Xà Bông Hữu Cơ Hạt Mùi (Tặng Túi Tạo Bọt)",
     price: 130000,
-    titleTag: [
-      "Sản phẩm TẮM an lành nhất",
-      "Thư giãn tuyệt đối với hương quê nhà",
-      " lãng mạn",
-    ],
+    titleTag:
+      "Sản phẩm TẮM an lành nhất, Thư giãn tuyệt đối với hương quê nhà, lãng mạn",
 
     image: [
       "https://static.comem.vn/uploads/February2022/XB_mui_gia_6_sp2x.jpg",
@@ -535,7 +542,7 @@ export const datas = [
       "hông chứa sulfate, paraben, silicone, hương liệu hóa học",
     ],
     colors: ["Màu Đen", "Màu Đỏ", "Màu Hồng", "Màu Vàng"],
-    rating: 5,
+    rating: 4.5,
     category: "Cơ thể",
     brand: "xabong",
     bestSeller: false,
@@ -562,9 +569,10 @@ export const datas = [
 
   {
     id: "11132",
+    review: "32",
     name: "Tinh Dầu Nguyên Chất (Lọ To 20ml)",
     price: 130000,
-    titleTag: ["Cải thiện tình trạng căng thẳng", "mất ngủ"],
+    titleTag: "Cải thiện tình trạng căng thẳng, mất ngủ",
 
     image: [
       "https://static.comem.vn/uploads/May2022/Tinh_dau_Ban_mai_3_sp2x_sp2x.jpg",
@@ -582,7 +590,7 @@ export const datas = [
       "hông chứa sulfate, paraben, silicone, hương liệu hóa học",
     ],
     colors: ["Màu Vàng", "Màu Đen"],
-    rating: 5,
+    rating: 1,
     category: "Hương thơm",
     brand: "tinhdau",
     bestSeller: false,
@@ -608,9 +616,10 @@ export const datas = [
   },
   {
     id: "11133",
+    review: "55",
     name: "Combo Phố Xa (Sữa Tắm + Sữa Dưỡng Thể Hoa Bưởi Sáng Da + Nước Hoa Khô)",
     price: 500000,
-    titleTag: ["Sản phẩm TẮM an lành nhất", "dịu nhẹ", " lãng mạn"],
+    titleTag: "Sản phẩm TẮM an lành nhất, dịu nhẹ,  lãng mạn",
 
     image: [
       "https://static.comem.vn/uploads/December2021/td_(12)_sp2x.jpg",
@@ -654,9 +663,10 @@ export const datas = [
   },
   {
     id: "11134",
+    review: "64",
     name: "Nước Hoa Bí Mật (Dùng Được Cho Vùng Kín)",
     price: 310000,
-    titleTag: ["Hương thơm tinh tế cho vùng bí mật"],
+    titleTag: "Hương thơm tinh tế cho vùng bí mật",
 
     image: [
       "https://static.comem.vn/uploads/October2021/bi_mat_sp2x.jpg",
@@ -674,7 +684,7 @@ export const datas = [
       "hông chứa sulfate, paraben, silicone, hương liệu hóa học",
     ],
     colors: ["Màu Đen", "Màu Đỏ"],
-    rating: 5,
+    rating: 4.5,
     category: "Hương thơm",
     brand: "tinhdau",
     bestSeller: false,
@@ -700,9 +710,10 @@ export const datas = [
   },
   {
     id: "11135",
+    review: "78",
     name: "Nước Hoa Khô Cỏ Mềm",
     price: 130000,
-    titleTag: ["Hương thơm thanh xuân", "hiện đại và lãng mạn", " lãng mạn"],
+    titleTag: "Hương thơm thanh xuân, hiện đại và lãng mạn,  lãng mạn",
 
     image: [
       "https://static.comem.vn/uploads/May2022/21_sp2x_(1)_sp2x.jpg",
@@ -747,9 +758,10 @@ export const datas = [
 
   {
     id: "11136",
+    review: "87",
     name: "[SET QUÀ TẶNG] Son Dưỡng Gạo + Xà Bông Rửa Mặt",
     price: 220000,
-    titleTag: ["Tặng kèm hộp đựng quà"],
+    titleTag: "Tặng kèm hộp đựng quà",
 
     image: [
       "https://static.comem.vn/uploads/September2022/qua-tang-son-duong-xa-bong-min_sp2x.jpg",
@@ -793,9 +805,10 @@ export const datas = [
   },
   {
     id: "11137",
+    review: "98",
     name: "[SET QUÀ TẶNG] Bộ Sản Phẩm Gội Xả Thảo Dược Tóc Mây - Tóc Khỏe Từ Gốc, Giảm Gãy Rụng",
     price: 560000,
-    titleTag: ["Tặng hộp quà sang trọng kèm theo."],
+    titleTag: "Tặng hộp quà sang trọng kèm theo.",
 
     image: [
       "https://static.comem.vn/uploads/September2022/qua-tang-toc-may-cho-me_sp2x.jpg",
@@ -839,9 +852,10 @@ export const datas = [
   },
   {
     id: "11138",
+    review: "22",
     name: "[SET QUÀ TẶNG] Combo Tất Niên (Xà Bông Hạt Mùi + Tinh Dầu Hạt Mùi)",
     price: 400000,
-    titleTag: ["Tặng hộp quà sang trọng kèm theo."],
+    titleTag: "Tặng hộp quà sang trọng kèm theo.",
 
     image: [
       "https://static.comem.vn/uploads/January2022/2_sp2x.jpg",
@@ -885,9 +899,10 @@ export const datas = [
   },
   {
     id: "11139",
+    review: "15",
     name: "[SET QUÀ TẶNG] Son Ngọc + Son Gạo",
     price: 350000,
-    titleTag: ["Tặng hộp quà sang trọng kèm theo."],
+    titleTag: "Tặng hộp quà sang trọng kèm theo.",
 
     image: [
       "https://static.comem.vn/uploads/December2021/Thiet_ke_khong_ten_(4)_sp2x.jpg",
@@ -932,9 +947,10 @@ export const datas = [
 
   {
     id: "11140",
+    review: "76",
     name: "Túi Vải Đựng Mỹ Phẩm",
     price: 40000,
-    titleTag: ["Túi nhỏ xinh", "tiện dụng đựng đồ trang điểm", "mỹ phẩm"],
+    titleTag: "Túi nhỏ xinh, tiện dụng đựng đồ trang điểm, mỹ phẩm",
 
     image: [
       "https://static.comem.vn/uploads/November2021/td_(7)_sp2x.jpg",
@@ -978,9 +994,10 @@ export const datas = [
   },
   {
     id: "11141",
+    review: "443",
     name: "Quà Tặng Trà Rau Má Gạo Lứt",
     price: 125000,
-    titleTag: ["Túi nhỏ xinh", "tiện dụng đựng đồ trang điểm"],
+    titleTag: "Túi nhỏ xinh, tiện dụng đựng đồ trang điểm",
 
     image: [
       "https://static.comem.vn/uploads/October2022/tra-rau-ma-gao-lut_sp2x.jpg",
@@ -1024,9 +1041,10 @@ export const datas = [
   },
   {
     id: "11142",
+    review: "12",
     name: "Túi Nhỏ Cỏ 4 Lá",
     price: 20000,
-    titleTag: ["Túi nhỏ xinh"],
+    titleTag: "Túi nhỏ xinh",
 
     image: [
       "https://static.comem.vn/uploads/August2021/kkk-510x510_sp2x.jpg",
@@ -1070,9 +1088,10 @@ export const datas = [
   },
   {
     id: "11143",
+    review: "521",
     name: "Túi Vải Vintage - Bảo Vệ Môi Trường",
     price: 20000,
-    titleTag: ["Xinh xắn", "tiện dụng"],
+    titleTag: "Xinh xắn, tiện dụng",
 
     image: [
       "https://static.comem.vn/uploads/August2021/mau-2-510x510_sp2x.jpg",

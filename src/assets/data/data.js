@@ -1,6 +1,6 @@
 export const datas = [
   {
-    id: 11120,
+    id: "11120",
     name: "Nước Tẩy Trang Rau Má Dành Cho Da Dầu Mụn",
     price: 12000,
     titleTag: ["Làm sạch nhanh", "dịu nhẹ", "ngăn ngừa mụn"],
@@ -46,7 +46,7 @@ export const datas = [
     },
   },
   {
-    id: 11121,
+    id: "11121",
     name: "Kem Má Hồng Hây Hây",
     price: 12000,
     titleTag: ["Trang điểm gò má", "nổi bật gương mặt"],
@@ -92,7 +92,7 @@ export const datas = [
     },
   },
   {
-    id: 11122,
+    id: "11122",
     name: "Lip Scrub Môi Hồng Ngăn Ngừa Môi Thâm, Hồng Tự Nhiên",
     price: 130000,
     titleTag: ["Giúp môi hồng mềm mịn", "ngăn ngừa thâm môi"],
@@ -138,7 +138,7 @@ export const datas = [
     },
   },
   {
-    id: 11123,
+    id: "11123",
     name: "Son Kem Nhung - Lì Mượt Không Silicon",
     price: 160000,
     titleTag: ["Không chì", "Hợp nhiều màu da"],
@@ -185,7 +185,7 @@ export const datas = [
   },
 
   {
-    id: 11124,
+    id: "11124",
     name: "Kem Dưỡng Ẩm Ngừa Lão Hóa Tơ Tằm - Dưỡng Ẩm Chuyên Sâu Với Coenzym Q10",
     price: 315000,
     titleTag: [
@@ -234,7 +234,7 @@ export const datas = [
     },
   },
   {
-    id: 11125,
+    id: "11125",
     name: "Nước Tẩy Trang Rau Má Dành Cho Da Dầu Mụn",
     price: 179000,
     titleTag: ["Làm sạch nhanh", "dịu nhẹ", "ngăn ngừa mụn"],
@@ -280,7 +280,7 @@ export const datas = [
     },
   },
   {
-    id: 11126,
+    id: "11126",
     name: "Nước Tẩy Trang Rau Má Dành Cho Da Dầu Mụn",
     price: 149000,
     titleTag: ["An toàn cho da nhạy cảm", "dịu nhẹ", "ngăn ngừa mụn"],
@@ -325,7 +325,7 @@ export const datas = [
     },
   },
   {
-    id: 11127,
+    id: "11127",
     name: "Nước Tẩy Trang Rau Má Dành Cho Da Dầu Mụn",
     price: 156000,
     titleTag: ["An toàn cho da nhạy cảm", "dịu nhẹ", "ngăn ngừa mụn"],
@@ -372,7 +372,7 @@ export const datas = [
   },
 
   {
-    id: 11128,
+    id: "11128",
     name: "Xà Bông Hữu Cơ Hương Nước Hoa (Tặng Túi Tạo Bọt)",
     price: 135000,
     titleTag: ["Ngọt ngào", "dịu nhẹ", " lãng mạn"],
@@ -418,7 +418,7 @@ export const datas = [
     },
   },
   {
-    id: 11129,
+    id: "11129",
     name: "Xà Bông Thiên Nhiên Hương Thảo Mộc (Tặng Túi Tạo Bọt)",
     price: 130000,
     titleTag: ["Sản phẩm TẮM an lành nhất", "dịu nhẹ", " lãng mạn"],
@@ -464,7 +464,7 @@ export const datas = [
     },
   },
   {
-    id: 11130,
+    id: "11130",
     name: "Xà Bông Thiên Nhiên Hương Thảo Mộc (Tặng Túi Tạo Bọt)",
     price: 130000,
     titleTag: ["Sản phẩm TẮM an lành nhất", "dịu nhẹ", " lãng mạn"],
@@ -510,7 +510,7 @@ export const datas = [
     },
   },
   {
-    id: 11131,
+    id: "11131",
     name: "Xà Bông Hữu Cơ Hạt Mùi (Tặng Túi Tạo Bọt)",
     price: 130000,
     titleTag: [
@@ -561,7 +561,7 @@ export const datas = [
   },
 
   {
-    id: 11132,
+    id: "11132",
     name: "Tinh Dầu Nguyên Chất (Lọ To 20ml)",
     price: 130000,
     titleTag: ["Cải thiện tình trạng căng thẳng", "mất ngủ"],
@@ -607,7 +607,7 @@ export const datas = [
     },
   },
   {
-    id: 11133,
+    id: "11133",
     name: "Combo Phố Xa (Sữa Tắm + Sữa Dưỡng Thể Hoa Bưởi Sáng Da + Nước Hoa Khô)",
     price: 500000,
     titleTag: ["Sản phẩm TẮM an lành nhất", "dịu nhẹ", " lãng mạn"],
@@ -653,7 +653,7 @@ export const datas = [
     },
   },
   {
-    id: 11134,
+    id: "11134",
     name: "Nước Hoa Bí Mật (Dùng Được Cho Vùng Kín)",
     price: 310000,
     titleTag: ["Hương thơm tinh tế cho vùng bí mật"],
@@ -699,7 +699,7 @@ export const datas = [
     },
   },
   {
-    id: 11135,
+    id: "11135",
     name: "Nước Hoa Khô Cỏ Mềm",
     price: 130000,
     titleTag: ["Hương thơm thanh xuân", "hiện đại và lãng mạn", " lãng mạn"],
@@ -746,7 +746,7 @@ export const datas = [
   },
 
   {
-    id: 11136,
+    id: "11136",
     name: "[SET QUÀ TẶNG] Son Dưỡng Gạo + Xà Bông Rửa Mặt",
     price: 220000,
     titleTag: ["Tặng kèm hộp đựng quà"],
@@ -792,7 +792,7 @@ export const datas = [
     },
   },
   {
-    id: 11137,
+    id: "11137",
     name: "[SET QUÀ TẶNG] Bộ Sản Phẩm Gội Xả Thảo Dược Tóc Mây - Tóc Khỏe Từ Gốc, Giảm Gãy Rụng",
     price: 560000,
     titleTag: ["Tặng hộp quà sang trọng kèm theo."],
@@ -838,7 +838,7 @@ export const datas = [
     },
   },
   {
-    id: 11138,
+    id: "11138",
     name: "[SET QUÀ TẶNG] Combo Tất Niên (Xà Bông Hạt Mùi + Tinh Dầu Hạt Mùi)",
     price: 400000,
     titleTag: ["Tặng hộp quà sang trọng kèm theo."],
@@ -884,7 +884,7 @@ export const datas = [
     },
   },
   {
-    id: 11139,
+    id: "11139",
     name: "[SET QUÀ TẶNG] Son Ngọc + Son Gạo",
     price: 350000,
     titleTag: ["Tặng hộp quà sang trọng kèm theo."],
@@ -931,7 +931,7 @@ export const datas = [
   },
 
   {
-    id: 11140,
+    id: "11140",
     name: "Túi Vải Đựng Mỹ Phẩm",
     price: 40000,
     titleTag: ["Túi nhỏ xinh", "tiện dụng đựng đồ trang điểm", "mỹ phẩm"],
@@ -977,7 +977,7 @@ export const datas = [
     },
   },
   {
-    id: 11141,
+    id: "11141",
     name: "Quà Tặng Trà Rau Má Gạo Lứt",
     price: 125000,
     titleTag: ["Túi nhỏ xinh", "tiện dụng đựng đồ trang điểm"],
@@ -1023,7 +1023,7 @@ export const datas = [
     },
   },
   {
-    id: 11142,
+    id: "11142",
     name: "Túi Nhỏ Cỏ 4 Lá",
     price: 20000,
     titleTag: ["Túi nhỏ xinh"],
@@ -1069,7 +1069,7 @@ export const datas = [
     },
   },
   {
-    id: 11143,
+    id: "11143",
     name: "Túi Vải Vintage - Bảo Vệ Môi Trường",
     price: 20000,
     titleTag: ["Xinh xắn", "tiện dụng"],

@@ -1,23 +1,17 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import { datas } from "../assets/data/data";
 
 const SingleProducts = () => {
+  const { id } = useParams();
+  const product = datas.find((product) => product.id === id);
+
+  const { name, price, rating, category, brand, max } = product;
+
   return (
     <div className="container">
-      {datas.map((item) => {
-        return (
-          <div>
-            {/* <p>{item.name}</p>
-            <p>{item.max}</p>
-            <p>{item.rating}</p>
-            <p>{item.price}</p>
-            <p>{item.id}</p>
-            <p>{item.titleTag}</p>
-            <p>{item.image}</p>
-            <p>{item.info}</p> */}
-          </div>
-        );
-      })}
+      <div className="singlePage-left"></div>
+      <div className="singlePage-right"></div>
     </div>
   );
 };

@@ -15,6 +15,12 @@ import source2 from "./source-2.png";
 import source3 from "./source-3.png";
 import source4 from "./source-4.png";
 
+import source5 from "./source-5.png";
+import source6 from "./source6.png";
+import source7 from "./source-7.png";
+import source8 from "./source-8.png";
+import source9 from "./source-9.png";
+
 export {
   Slide1,
   Slide2,
@@ -32,4 +38,9 @@ export {
   source2,
   source3,
   source4,
+  source5,
+  source6,
+  source7,
+  source8,
+  source9,
 };

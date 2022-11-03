@@ -71,7 +71,7 @@ export const datas = [
     colors: ["Màu hồng", "Màu vàng"],
     rating: 4.5,
     category: "Trang Điểm",
-    brand: "kemma",
+    brand: "Kem má",
     bestSeller: true,
     max: 16,
     thumbnails: {
@@ -118,7 +118,7 @@ export const datas = [
     colors: ["Màu hồng", "Màu vàng", "Màu Xanh"],
     rating: 3,
     category: "Trang Điểm",
-    brand: "son",
+    brand: "Son",
     bestSeller: false,
     max: 17,
     thumbnails: {
@@ -165,7 +165,7 @@ export const datas = [
     colors: ["Màu hồng", "Màu vàng", "Màu Xanh"],
     rating: 5,
     category: "Trang Điểm",
-    brand: "son",
+    brand: "Son",
     bestSeller: false,
     max: 15,
     thumbnails: {
@@ -214,7 +214,7 @@ export const datas = [
     colors: ["Màu hồng", "Màu vàng", "Màu Tím"],
     rating: 4.5,
     category: "Da",
-    brand: "duongam",
+    brand: "Dưỡng Ẩm",
     bestSeller: true,
     max: 11,
     thumbnails: {
@@ -261,7 +261,7 @@ export const datas = [
     colors: ["Màu hồng", "Màu vàng", "Màu Tím"],
     rating: 4,
     category: "Da",
-    brand: "taytrang",
+    brand: "Tẩy trang",
     bestSeller: true,
     max: 11,
     thumbnails: {
@@ -308,7 +308,7 @@ export const datas = [
     colors: ["Màu hồng", "Màu Tím"],
     rating: 5,
     category: "Da",
-    brand: "ruamat",
+    brand: "Rửa mặt",
     bestSeller: false,
     max: 30,
     thumbnails: {
@@ -954,10 +954,11 @@ export const datas = [
 
     image: [
       "https://static.comem.vn/uploads/November2021/td_(7)_sp2x.jpg",
-      "https://static.comem.vn/uploads/November2021/td_(8)_sp2x.jpg",
-      "https://static.comem.vn/uploads/December2021/Logo_vuong_(cach_le)_sp2x.jpg",
-      "https://static.comem.vn/uploads/December2021/Logo_vuong_(cach_le)_sp2x.jpg",
-      "https://static.comem.vn/uploads/December2021/Logo_vuong_(cach_le)_sp2x.jpg",
+      "https://static.comem.vn/uploads/October2022/qua-tang-20-10-tra-gao-lut_sp2x.jpg",
+      "https://static.comem.vn/uploads/August2021/mau-1-510x510_sp2x.jpg",
+
+      "https://static.comem.vn/uploads/September2021/Xa_bong_Co_Mem_3_sp2x.jpg",
+      "https://static.comem.vn/uploads/November2021/xa_bong_sp2x.png",
     ],
     info: [
       "Tinh dầu Mùi nguyên chất Thư giãn tinh thần tuyệt đối. Kháng khuẩn, nấm, virus, thanh lọc không khí",
@@ -1002,9 +1003,10 @@ export const datas = [
     image: [
       "https://static.comem.vn/uploads/October2022/tra-rau-ma-gao-lut_sp2x.jpg",
       "https://static.comem.vn/uploads/October2022/qua-tang-20-10-tra-gao-lut_sp2x.jpg",
-      "https://static.comem.vn/uploads/December2021/Logo_vuong_(cach_le)_sp2x.jpg",
-      "https://static.comem.vn/uploads/December2021/Logo_vuong_(cach_le)_sp2x.jpg",
-      "https://static.comem.vn/uploads/December2021/Logo_vuong_(cach_le)_sp2x.jpg",
+      "https://static.comem.vn/uploads/August2021/mau-1-510x510_sp2x.jpg",
+
+      "https://static.comem.vn/uploads/September2021/Xa_bong_Co_Mem_3_sp2x.jpg",
+      "https://static.comem.vn/uploads/November2021/xa_bong_sp2x.png",
     ],
     info: [
       "Tinh dầu Mùi nguyên chất Thư giãn tinh thần tuyệt đối. Kháng khuẩn, nấm, virus, thanh lọc không khí",
@@ -1049,9 +1051,10 @@ export const datas = [
     image: [
       "https://static.comem.vn/uploads/August2021/kkk-510x510_sp2x.jpg",
       "https://static.comem.vn/uploads/August2021/kkk-510x510_sp2x.jpg",
-      "https://static.comem.vn/uploads/December2021/Logo_vuong_(cach_le)_sp2x.jpg",
-      "https://static.comem.vn/uploads/December2021/Logo_vuong_(cach_le)_sp2x.jpg",
-      "https://static.comem.vn/uploads/December2021/Logo_vuong_(cach_le)_sp2x.jpg",
+
+      "https://static.comem.vn/uploads/September2021/Kem_ma_hong_Hay_Hay_3_(1)_sp2x.jpg",
+      "https://static.comem.vn/uploads/September2021/Xa_bong_Co_Mem_3_sp2x.jpg",
+      "https://static.comem.vn/uploads/November2021/xa_bong_sp2x.png",
     ],
     info: [
       "Tinh dầu Mùi nguyên chất Thư giãn tinh thần tuyệt đối. Kháng khuẩn, nấm, virus, thanh lọc không khí",
@@ -1096,9 +1099,9 @@ export const datas = [
     image: [
       "https://static.comem.vn/uploads/August2021/mau-2-510x510_sp2x.jpg",
       "https://static.comem.vn/uploads/August2021/mau-1-510x510_sp2x.jpg",
-      "https://static.comem.vn/uploads/December2021/Logo_vuong_(cach_le)_sp2x.jpg",
-      "https://static.comem.vn/uploads/December2021/Logo_vuong_(cach_le)_sp2x.jpg",
-      "https://static.comem.vn/uploads/December2021/Logo_vuong_(cach_le)_sp2x.jpg",
+      "https://static.comem.vn/uploads/September2021/Kem_ma_hong_Hay_Hay_3_(1)_sp2x.jpg",
+      "https://static.comem.vn/uploads/September2021/Xa_bong_Co_Mem_3_sp2x.jpg",
+      "https://static.comem.vn/uploads/November2021/xa_bong_sp2x.png",
     ],
     info: [
       "Tinh dầu Mùi nguyên chất Thư giãn tinh thần tuyệt đối. Kháng khuẩn, nấm, virus, thanh lọc không khí",

@@ -5,6 +5,9 @@ module.exports = {
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
       },
+      gridTemplateColumns: {
+        footer: "300px minmax(900px, 1fr) 100px",
+      },
     },
   },
   plugins: [],

@@ -6,8 +6,12 @@ import "../../index.css";
 
 import { links } from "../../assets/data/links";
 
+import { useSelector } from "react-redux";
+
 const Header = () => {
   const headerRef = useRef(null);
+
+  const amount = useSelector((store) => store.cart.amount);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -56,7 +60,7 @@ const Header = () => {
               <span className="cart-container flex items-center relative  ">
                 <FaShoppingBag className="text-white w-[28px] h-[28px]" />
                 <span className="cart-value absolute top-[-16px] right-[-18px] w-[16px] h-[16px] flex items-center justify-center bg-orange-300 rounded-full p-[15px] text-xs  text-white">
-                  15
+                  {amount}
                 </span>
               </span>
             </Link>

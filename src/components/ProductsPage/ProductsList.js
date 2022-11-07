@@ -3,14 +3,14 @@ import { useSelector } from "react-redux";
 import ProductsItems from "./ProductsItems";
 
 const ProductsList = () => {
-  const { cartItems } = useSelector((store) => store.cart);
-  console.log(cartItems);
+  const { filteredProducts } = useSelector((store) => store.filter);
+
   return (
-    <section className="pt-[30px]  grid grid-cols-4 gap-8 ">
-      {cartItems.map((item) => {
+    <div className="pt-[30px] transition-all section-center text-black gap-[30px] grid grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 max-md:grid-cols-1">
+      {filteredProducts.map((item) => {
         return <ProductsItems key={item.id} {...item} />;
       })}
-    </section>
+    </div>
   );
 };
 

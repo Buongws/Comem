@@ -25,7 +25,7 @@ const FeaturedProducts = () => {
                 </div>
                 <div className="p-[20px] flex-1 flex flex-col justify-between">
                   <h2 className="text-[16.5px] mb-[15px] font-medium">
-                    {`${item.name.substring(0, 45)}...`}
+                    {`${item.name.substring(0, 100)}...`}
                   </h2>
                   <Link to={`/products/${item.id}`} className="btn pt-[10px]">
                     {formatPrice(item.price)}

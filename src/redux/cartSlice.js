@@ -11,8 +11,11 @@ const initialState = {
 const cartSlice = createSlice({
   name: "cart",
   initialState,
+  reducers: {},
 });
 
 // console.log(cartSlice);
+
+export const { sortProducts, sortGetValue } = cartSlice.actions;
 
 export default cartSlice.reducer;

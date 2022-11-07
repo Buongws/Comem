@@ -6,7 +6,11 @@ module.exports = {
         playfair: ["Playfair Display", "serif"],
       },
       gridTemplateColumns: {
-        footer: "300px minmax(900px, 1fr) 100px",
+        footer: "200px minmax(900px, 1fr) 100px",
+      },
+      screens: {
+        md: "990px",
+        lg: "1190px",
       },
     },
   },

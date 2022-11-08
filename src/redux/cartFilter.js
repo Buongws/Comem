@@ -55,8 +55,6 @@ const filterSlice = createSlice({
     },
 
     updateFiltersText(state, action) {
-      console.log(action.payload);
-
       state.filters.category = action.payload.category;
       state.filters.text = action.payload.text;
       state.filters.brand = action.payload.brand;
@@ -68,17 +66,34 @@ const filterSlice = createSlice({
       tempFilter = state.originalData.filter((product) => {
         return product.name.toLowerCase().includes(state.filters.text);
       });
+
       //filter category
       if (state.filters.category.toLowerCase() !== "all") {
-        console.log(state.filters.category);
         tempFilter = tempFilter.filter((it) => it.category === state.filters.category);
         console.log(tempFilter);
       }
-      //filter brand
+
+      // filter brand
+      if (state.filters.brand.toLowerCase() !== "all") {
+        tempFilter = tempFilter.filter(
+          (it) => it.brand.toLowerCase() === state.filters.brand.toLowerCase()
+        );
+        console.log(tempFilter);
+      }
+      // tempFilter = tempFilter.filter(
+      //   (it) => it.brand.toLowerCase() === state.filters.brand.toLowerCase()
+      // );
       // if (state.filters.brand.toLowerCase() !== "all") {
-      //   console.log(state.filters.brand);
+      //   tempFilter = state.originalData.filter((i) => {
+      //     return i.brand.toLowerCase() === state.filters.brand.toLowerCase();
+      //   });
       // }
-      //filter shipping
+
+      // if (state.filters.brand.toLowerCase() !== "all") {
+      //   tempFilter = tempFilter.filter((it) => it.brand === state.brand.category);
+      //   console.log(tempFilter);
+      // }
+
       state.filteredProducts = tempFilter;
     },
   },

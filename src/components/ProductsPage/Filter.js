@@ -21,10 +21,10 @@ const Filter = () => {
     dispatch(cartFilterActions.updateFiltersText({ category: newCategory, text }));
   };
   const updateBrand = (e) => {
-    const newCategory = e.target.value;
+    const newCategory = e.currentTarget.value;
     dispatch(cartFilterActions.updateFiltersText({ brand: newCategory }));
   };
-  console.log(brand);
+
   return (
     <div>
       <h3 className="text-[20px] font-bold text-[#4c503d] uppercase pb-[15px]">
@@ -100,7 +100,23 @@ const Filter = () => {
         <div className="form-control">
           <h5> company</h5>
           <select name="company" value={brand} onChange={updateBrand} className="company">
-            <option>{brand}</option>
+            {originalData
+              .reduce(
+                (pre, val, i) => {
+                  const checkExistCategory = pre.findIndex((it) => it.brand === val.brand);
+
+                  if (checkExistCategory === -1) {
+                    pre.push({ brand: val.brand });
+                    return pre;
+                  }
+
+                  return pre;
+                },
+                [{ brand: "All" }]
+              )
+              .map((c, index) => {
+                return <option key={index}>{c.brand}</option>;
+              })}
           </select>
         </div>
       </>
@@ -112,3 +128,6 @@ export default Filter;
 
 // value = { text };
 // onChange = { updateText };
+// .map((i, index) => {
+//   return <option key={index}>{i.brand}</option>;
+// })

@@ -6,6 +6,7 @@ const initialState = {
   cartItems: datas,
   amount: 0,
   total: 0,
+  opensiderBarContent: false,
 };
 
 const cartSlice = createSlice({
@@ -16,6 +17,6 @@ const cartSlice = createSlice({
 
 // console.log(cartSlice);
 
-export const { sortProducts, sortGetValue } = cartSlice.actions;
+export const cartFilterActions = cartSlice.actions;
 
 export default cartSlice.reducer;

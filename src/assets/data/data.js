@@ -24,7 +24,7 @@ export const datas = [
     ],
     rating: 3.5,
     category: "Trang Điểm",
-    brand: "nuoctaytrang",
+    brand: "Nước tẩy trang",
     bestSeller: false,
     max: 20,
     thumbnails: {
@@ -71,7 +71,7 @@ export const datas = [
     colors: ["Màu hồng", "Màu vàng"],
     rating: 4.5,
     category: "Trang Điểm",
-    brand: "Kem má",
+    brand: "Rửa mặt",
     bestSeller: true,
     max: 16,
     thumbnails: {
@@ -165,7 +165,7 @@ export const datas = [
     colors: ["Màu hồng", "Màu vàng", "Màu Xanh"],
     rating: 5,
     category: "Trang Điểm",
-    brand: "Son",
+    brand: "Rửa mặt",
     bestSeller: false,
     max: 15,
     thumbnails: {
@@ -213,7 +213,7 @@ export const datas = [
     colors: ["Màu hồng", "Màu vàng", "Màu Tím"],
     rating: 4.5,
     category: "Da",
-    brand: "Dưỡng Ẩm",
+    brand: "Rửa mặt",
     bestSeller: true,
     max: 11,
     thumbnails: {
@@ -353,7 +353,7 @@ export const datas = [
     colors: ["Màu Vàng", "Màu Đỏ"],
     rating: 2.5,
     category: "Da",
-    brand: "serum",
+    brand: "Rửa mặt",
     bestSeller: true,
     max: 31,
     thumbnails: {
@@ -590,7 +590,7 @@ export const datas = [
     colors: ["Màu Vàng", "Màu Đen"],
     rating: 1,
     category: "Hương thơm",
-    brand: "Tinh dầu",
+    brand: "Nước Hoa",
     bestSeller: false,
     max: 15,
     thumbnails: {
@@ -637,7 +637,7 @@ export const datas = [
     colors: ["Màu Đen", "Màu Đỏ", "Màu Vàng"],
     rating: 4,
     category: "Hương thơm",
-    brand: "Tinh dầu",
+    brand: "Nước Hoa",
     bestSeller: false,
     max: 11,
     thumbnails: {
@@ -684,7 +684,7 @@ export const datas = [
     colors: ["Màu Đen", "Màu Đỏ"],
     rating: 4.5,
     category: "Hương thơm",
-    brand: "Tinh dầu",
+    brand: "Nước Hoa",
     bestSeller: false,
     max: 15,
     thumbnails: {
@@ -969,7 +969,7 @@ export const datas = [
     colors: ["Màu Vàng"],
     rating: 4,
     category: "Khác",
-    brand: "Túi Vải",
+    brand: "Hộp quà",
     bestSeller: false,
     max: 20,
     thumbnails: {
@@ -1017,7 +1017,7 @@ export const datas = [
     colors: ["Màu Vàng"],
     rating: 5,
     category: "Khác",
-    brand: "Trà",
+    brand: "Hộp quà",
     bestSeller: true,
     max: 15,
     thumbnails: {
@@ -1112,7 +1112,7 @@ export const datas = [
     colors: ["Màu Vàng"],
     rating: 5,
     category: "Khác",
-    brand: "Túi Nhỏ",
+    brand: "Hộp quà",
     bestSeller: true,
     max: 5,
     thumbnails: {

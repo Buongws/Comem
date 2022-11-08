@@ -8,7 +8,7 @@ const initialState = {
   sort: "price-lowest",
   filters: {
     text: "",
-    category: "All",
+    category: "all",
     brand: "all",
     colors: "all",
     min_price: 0,
@@ -59,6 +59,9 @@ const filterSlice = createSlice({
 
       state.filters.category = action.payload.category;
       state.filters.text = action.payload.text;
+      state.filters.brand = action.payload.brand;
+
+      console.log(state.filters.brand);
 
       let tempFilter = [];
       //filter input search
@@ -71,7 +74,10 @@ const filterSlice = createSlice({
         tempFilter = tempFilter.filter((it) => it.category === state.filters.category);
         console.log(tempFilter);
       }
-      //filter price
+      //filter brand
+      // if (state.filters.brand.toLowerCase() !== "all") {
+      //   console.log(state.filters.brand);
+      // }
       //filter shipping
       state.filteredProducts = tempFilter;
     },

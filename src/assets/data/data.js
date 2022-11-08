@@ -193,8 +193,7 @@ export const datas = [
     review: "313",
     name: "Kem Dưỡng Ẩm Ngừa Lão Hóa Tơ Tằm - Dưỡng Ẩm Chuyên Sâu Với Coenzym Q10",
     price: 315000,
-    titleTag:
-      "Kem dưỡng ẩm ngừa lão hóa bổ sung HA, Niacinamide cho làn da căng mịn tươi trẻ",
+    titleTag: "Kem dưỡng ẩm ngừa lão hóa bổ sung HA, Niacinamide cho làn da căng mịn tươi trẻ",
 
     image: [
       "https://static.comem.vn/uploads/July2022/kem-duong-am-to-tam_sp2x.jpg",
@@ -402,7 +401,7 @@ export const datas = [
     colors: ["Màu Vàng", "Màu Đen"],
     rating: 5,
     category: "Cơ thể",
-    brand: "xabong",
+    brand: "Xà bông",
     bestSeller: false,
     max: 14,
     thumbnails: {
@@ -449,7 +448,7 @@ export const datas = [
     colors: ["Màu Đen", "Màu Đỏ", "Màu Hồng", "Màu Vàng"],
     rating: 3,
     category: "Cơ thể",
-    brand: "xabong",
+    brand: "Xà bông",
     bestSeller: false,
     max: 11,
     thumbnails: {
@@ -496,7 +495,7 @@ export const datas = [
     colors: ["Màu Đen", "Màu Đỏ", "Màu Hồng", "Màu Vàng"],
     rating: 4,
     category: "Cơ thể",
-    brand: "xabong",
+    brand: "Xà bông",
     bestSeller: true,
     max: 12,
     thumbnails: {
@@ -523,8 +522,7 @@ export const datas = [
     review: "12",
     name: "Xà Bông Hữu Cơ Hạt Mùi (Tặng Túi Tạo Bọt)",
     price: 130000,
-    titleTag:
-      "Sản phẩm TẮM an lành nhất, Thư giãn tuyệt đối với hương quê nhà, lãng mạn",
+    titleTag: "Sản phẩm TẮM an lành nhất, Thư giãn tuyệt đối với hương quê nhà, lãng mạn",
 
     image: [
       "https://static.comem.vn/uploads/February2022/XB_mui_gia_6_sp2x.jpg",
@@ -544,7 +542,7 @@ export const datas = [
     colors: ["Màu Đen", "Màu Đỏ", "Màu Hồng", "Màu Vàng"],
     rating: 4.5,
     category: "Cơ thể",
-    brand: "xabong",
+    brand: "Xà bông",
     bestSeller: false,
     max: 20,
     thumbnails: {
@@ -592,7 +590,7 @@ export const datas = [
     colors: ["Màu Vàng", "Màu Đen"],
     rating: 1,
     category: "Hương thơm",
-    brand: "tinhdau",
+    brand: "Tinh dầu",
     bestSeller: false,
     max: 15,
     thumbnails: {
@@ -639,7 +637,7 @@ export const datas = [
     colors: ["Màu Đen", "Màu Đỏ", "Màu Vàng"],
     rating: 4,
     category: "Hương thơm",
-    brand: "tinhdau",
+    brand: "Tinh dầu",
     bestSeller: false,
     max: 11,
     thumbnails: {
@@ -686,7 +684,7 @@ export const datas = [
     colors: ["Màu Đen", "Màu Đỏ"],
     rating: 4.5,
     category: "Hương thơm",
-    brand: "tinhdau",
+    brand: "Tinh dầu",
     bestSeller: false,
     max: 15,
     thumbnails: {
@@ -733,7 +731,7 @@ export const datas = [
     colors: ["Màu Đen", "Màu Vàng"],
     rating: 5,
     category: "Hương thơm",
-    brand: "nuochoa",
+    brand: "Nước Hoa",
     bestSeller: false,
     max: 28,
     thumbnails: {
@@ -781,7 +779,7 @@ export const datas = [
     colors: ["Màu Vàng", "Màu Vàng"],
     rating: 5,
     category: "Quà tặng",
-    brand: "hopqua",
+    brand: "Hộp quà",
     bestSeller: true,
     max: 10,
     thumbnails: {
@@ -828,7 +826,7 @@ export const datas = [
     colors: ["Màu Vàng", "Màu Đen"],
     rating: 5,
     category: "Quà tặng",
-    brand: "hopqua",
+    brand: "Hộp quà",
     bestSeller: true,
     max: 15,
     thumbnails: {
@@ -875,7 +873,7 @@ export const datas = [
     colors: ["Màu Vàng", "Màu Hồng"],
     rating: 4,
     category: "Quà tặng",
-    brand: "hopqua",
+    brand: "Hộp quà",
     bestSeller: false,
     max: 15,
     thumbnails: {
@@ -922,7 +920,7 @@ export const datas = [
     colors: ["Màu Vàng", "Màu Đen"],
     rating: 5,
     category: "Quà tặng",
-    brand: "hopqua",
+    brand: "Hộp quà",
     bestSeller: false,
     max: 30,
     thumbnails: {
@@ -971,7 +969,7 @@ export const datas = [
     colors: ["Màu Vàng"],
     rating: 4,
     category: "Khác",
-    brand: "tuivai",
+    brand: "Túi Vải",
     bestSeller: false,
     max: 20,
     thumbnails: {
@@ -1019,7 +1017,7 @@ export const datas = [
     colors: ["Màu Vàng"],
     rating: 5,
     category: "Khác",
-    brand: "trarauma",
+    brand: "Trà",
     bestSeller: true,
     max: 15,
     thumbnails: {
@@ -1067,7 +1065,7 @@ export const datas = [
     colors: ["Màu Vàng"],
     rating: 5,
     category: "Khác",
-    brand: "tuinho",
+    brand: "Túi Nhỏ",
     bestSeller: true,
     max: 5,
     thumbnails: {
@@ -1114,7 +1112,7 @@ export const datas = [
     colors: ["Màu Vàng"],
     rating: 5,
     category: "Khác",
-    brand: "tuinho",
+    brand: "Túi Nhỏ",
     bestSeller: true,
     max: 5,
     thumbnails: {

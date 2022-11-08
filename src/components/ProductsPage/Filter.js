@@ -20,7 +20,11 @@ const Filter = () => {
     const newCategory = e.currentTarget.textContent;
     dispatch(cartFilterActions.updateFiltersText({ category: newCategory, text }));
   };
-
+  const updateBrand = (e) => {
+    const newCategory = e.target.value;
+    dispatch(cartFilterActions.updateFiltersText({ brand: newCategory }));
+  };
+  console.log(brand);
   return (
     <div>
       <h3 className="text-[20px] font-bold text-[#4c503d] uppercase pb-[15px]">
@@ -49,17 +53,14 @@ const Filter = () => {
                 return it.id === originalData[i].id;
               });
 
-              console.log(checkIDinFilterSearch);
-
               //not exist cate + id not in filter
               if (checkExistCategory === -1 && checkIDinFilterSearch === -1) {
-                pre.push({ category: val.category, quantity: 0 });
+                pre.push({ category: val.category, quantity: val.length });
                 return pre;
               }
 
               //not exist cate + id in filter
               if (checkExistCategory === -1 && checkIDinFilterSearch !== -1) {
-                console.log("alo");
                 pre.push({ category: val.category, quantity: 1 });
                 return pre;
               }
@@ -72,7 +73,7 @@ const Filter = () => {
 
               return pre;
             },
-            [{ category: "Tất Cả", quantity: originalData.length }]
+            [{ category: "All", quantity: originalData.length }]
           )
 
           .map((c, index) => {
@@ -82,16 +83,27 @@ const Filter = () => {
                   key={index}
                   name="category"
                   type="button"
-                  className="text-[black] leading-[42px]"
+                  className="text-[#738136] leading-[42px]"
                   onClick={updateCategory}
                 >
                   {c.category}
                 </button>
-                <span>{c.quantity}</span>
+                <span className="translate-y-[-15%] inline-block text-[12px] text-[#f49e27] ml-[5px]">
+                  {c.quantity}
+                </span>
               </div>
             );
           })}
       </div>
+      {/* Products */}
+      <>
+        <div className="form-control">
+          <h5> company</h5>
+          <select name="company" value={brand} onChange={updateBrand} className="company">
+            <option>{brand}</option>
+          </select>
+        </div>
+      </>
     </div>
   );
 };

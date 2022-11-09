@@ -13,19 +13,8 @@ import AddToCart from "../components/SingleProductsPage/AddToCart";
 const SingleProducts = () => {
   const { id } = useParams();
   const product = datas.find((product) => product.id === id);
-  const {
-    name,
-    price,
-    rating,
-    category,
-    brand,
-    max,
-    image,
-    titleTag,
-    review,
-    info,
-    thumbnails,
-  } = product;
+  const { name, price, rating, category, brand, max, image, titleTag, review, info, thumbnails } =
+    product;
   console.log(thumbnails);
 
   const [main, setMain] = useState(0);
@@ -35,11 +24,7 @@ const SingleProducts = () => {
       <div className="container-medium grid grid-cols-2 pt-[50px]  max-lg:grid-cols-1">
         <div className="singlePage-left ">
           <section>
-            <img
-              src={image[main]}
-              alt="img"
-              className="h-[510px] w-full block object-cover"
-            />
+            <img src={image[main]} alt="img" className="h-[510px] w-full block object-cover" />
             <div className="mt-[14px] grid grid-cols-5 gap-4 ">
               {image.map((img, index) => {
                 return (
@@ -49,9 +34,7 @@ const SingleProducts = () => {
                     alt="img"
                     onClick={() => setMain(index)}
                     className={`h-[100px] cursor-pointer ease-in-out duration-700 hover:scale-90 ${
-                      main === index
-                        ? `shadow-2xl border-2 border-solid border-[#de8d1e]`
-                        : null
+                      main === index ? `shadow-2xl border-2 border-solid border-[#de8d1e]` : null
                     } `}
                   />
                 );
@@ -83,12 +66,10 @@ const SingleProducts = () => {
         </div>
         <div className="singlePage-right pl-[15px] max-lg:pl-[0] max-lg:pt-[30px] max-lg:pb-[30px]">
           <section className="content">
-            <h2 className="mb-[15px] text-[#4c503d] text-[22px]  font-semibold">
-              {name}
-            </h2>
+            <h2 className="mb-[15px] text-[#4c503d] text-[22px]  font-semibold">{name}</h2>
             <p className="desc mb-[10px] "> {titleTag}</p>
             <Stars stars={rating} reviewer={review} />
-            <h5 className="price text-[#4c503d] font-bold text-2xl tracking-[1px] mb-[10px] ">
+            <h5 className="price text-[#4c503d] font-bold text-2xl tracking-[1px] mb-[10px]  ">
               {formatPrice(price)}
             </h5>
             <AddToCart product={product} />
@@ -122,25 +103,19 @@ const SingleProducts = () => {
                 <span className="text-xs pt-[2px] pb-[2px] pr-[5px] pl-[5px] border-solid border-2 border-[#de8d1e] text-[#de8d1e] whitespace-nowrap">
                   Quà Tặng
                 </span>
-                <p className="ml-[10px]">
-                  Mua 2 chai Nước súc miệng Tặng 1 Xịt thơm miệng
-                </p>
+                <p className="ml-[10px]">Mua 2 chai Nước súc miệng Tặng 1 Xịt thơm miệng</p>
               </div>
               <div className="fomo-item flex items-center mt-[15px]">
                 <span className="text-xs pt-[2px] pb-[2px] pr-[5px] pl-[5px] border-solid border-2 border-[#de8d1e] text-[#de8d1e]  whitespace-nowrap">
                   Quà Tặng
                 </span>
-                <p className="ml-[10px]">
-                  Tặng Trà Rau Má Gạo Lứt 125k Cho Đơn Hàng Từ 3 Sản Phẩm
-                </p>
+                <p className="ml-[10px]">Tặng Trà Rau Má Gạo Lứt 125k Cho Đơn Hàng Từ 3 Sản Phẩm</p>
               </div>
               <div className="fomo-item flex items-center mt-[15px]">
                 <span className="text-xs pt-[2px] pb-[2px] pr-[5px] pl-[5px] border-solid border-2 border-[#de8d1e] text-[#de8d1e]  whitespace-nowrap">
                   Giảm 60k
                 </span>
-                <p className="ml-[10px]">
-                  Khi mua sữa rửa mặt Rau Má kèm bất kì sản phẩm khác
-                </p>
+                <p className="ml-[10px]">Khi mua sữa rửa mặt Rau Má kèm bất kì sản phẩm khác</p>
               </div>
             </div>
           </div>

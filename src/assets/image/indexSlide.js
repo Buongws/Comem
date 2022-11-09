@@ -20,6 +20,7 @@ import source6 from "./source6.png";
 import source7 from "./source-7.png";
 import source8 from "./source-8.png";
 import source9 from "./source-9.png";
+import bgProduct from "./bg-product.jpg";
 
 export {
   Slide1,
@@ -43,4 +44,5 @@ export {
   source7,
   source8,
   source9,
+  bgProduct,
 };

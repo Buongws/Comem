@@ -14,17 +14,48 @@ const Filter = () => {
 
   const updateText = (e) => {
     const newSearchInput = e.currentTarget.value;
-    dispatch(cartFilterActions.updateFiltersText({ category, text: newSearchInput }));
+    dispatch(cartFilterActions.updateFiltersText({ text: newSearchInput }));
   };
   const updateCategory = (e) => {
     const newCategory = e.currentTarget.textContent;
-    dispatch(cartFilterActions.updateFiltersText({ category: newCategory, text }));
+    dispatch(cartFilterActions.updateFiltersText({ category: newCategory }));
   };
   const updateBrand = (e) => {
-    const newCategory = e.currentTarget.value;
-    dispatch(cartFilterActions.updateFiltersText({ brand: newCategory }));
+    const newBrand = e.currentTarget.value;
+    dispatch(cartFilterActions.updateFiltersText({ brand: newBrand }));
   };
+  console.log(
+    originalData.reduce(
+      (pre, val, i) => {
+        const checkExistCategory = pre.findIndex((it) => it.category === val.category);
 
+        const checkIDinFilterSearch = filteredProducts.findIndex((it) => {
+          return it.id === originalData[i].id;
+        });
+
+        //not exist cate + id not in filter
+        if (checkExistCategory === -1 && checkIDinFilterSearch === -1) {
+          pre.push({ category: val.category, quantity: 0 });
+          return pre;
+        }
+
+        //not exist cate + id in filter
+        if (checkExistCategory === -1 && checkIDinFilterSearch !== -1) {
+          pre.push({ category: val.category, quantity: 1 });
+          return pre;
+        }
+
+        //exist cate +  in filter
+        if (checkExistCategory !== -1 && checkIDinFilterSearch !== -1) {
+          pre[checkExistCategory].quantity += 1;
+          return pre;
+        }
+
+        return pre;
+      },
+      [{ category: "All", quantity: originalData.length }]
+    )
+  );
   return (
     <div>
       <h3 className="text-[20px] font-bold text-[#4c503d] uppercase pb-[15px]">
@@ -55,7 +86,7 @@ const Filter = () => {
 
               //not exist cate + id not in filter
               if (checkExistCategory === -1 && checkIDinFilterSearch === -1) {
-                pre.push({ category: val.category, quantity: val.length });
+                pre.push({ category: val.category, quantity: 0 });
                 return pre;
               }
 
@@ -98,7 +129,7 @@ const Filter = () => {
       {/* Products */}
       <>
         <div className="form-control">
-          <h5> company</h5>
+          <h5> Brand </h5>
           <select name="company" value={brand} onChange={updateBrand} className="company">
             {originalData
               .reduce(

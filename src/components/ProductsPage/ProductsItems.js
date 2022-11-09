@@ -19,7 +19,7 @@ const ProductsItems = ({ image, name, price, id }) => {
         >
           {name}
         </Link>
-        <h2 className="text-[#d35400] font-semibold tracking-[1px]]">
+        <h2 className="text-[#d35400] font-semibold tracking-[1px] text-[18.5px]">
           {formatPrice(price)}
         </h2>
       </div>

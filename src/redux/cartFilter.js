@@ -55,11 +55,11 @@ const filterSlice = createSlice({
     },
 
     updateFiltersText(state, action) {
-      state.filters.category = action.payload.category;
-      state.filters.text = action.payload.text;
-      state.filters.brand = action.payload.brand;
+      state.filters.category = action.payload.category || state.filters.category;
+      state.filters.text = action.payload.text || state.filters.text;
+      state.filters.brand = action.payload.brand || state.filters.brand;
 
-      console.log(state.filters.brand);
+      console.log(state.filters.brand, state.filters.category, state.filters.text);
 
       let tempFilter = [];
       //filter input search
@@ -75,9 +75,7 @@ const filterSlice = createSlice({
 
       // filter brand
       if (state.filters.brand.toLowerCase() !== "all") {
-        tempFilter = tempFilter.filter(
-          (it) => it.brand.toLowerCase() === state.filters.brand.toLowerCase()
-        );
+        tempFilter = tempFilter.filter((it) => it.brand === state.filters.brand);
         console.log(tempFilter);
       }
       // tempFilter = tempFilter.filter(

@@ -115,13 +115,20 @@ a {
 }
 
 .nav-link-ltr::before {
-  width: 0%;
   bottom: 10px;
+  width: 0%;
+  margin-left:50% ;
+  margin-right:50% ;
+
 }
 
 .nav-link-ltr:hover::before {
   width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
+
+
 /* FOOTER */
 .footer-site {
   background-color: #738136;

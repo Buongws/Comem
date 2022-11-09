@@ -32,8 +32,8 @@ const Header = () => {
       <div className="nav-center ">
         <div className="header-top flex items-center justify-between pr-[20px] pl-[20px] max-w-[80%] w-[100%] m-auto">
           <div className="header-logo">
-            <Link to="/" className=" w-[200px] h-[150px] flex items-center justify-center">
-              <img src={logo} alt="logo" />
+            <Link to="/" className="  flex items-center justify-center">
+              <img src={logo} alt="logo" className="w-[165px] h-[60px]" />
             </Link>
           </div>
           <div className="header-nav-links max-xl:hidden">
@@ -62,7 +62,7 @@ const Header = () => {
             <button type="button" className="mr-[30px] ">
               <FaUser className="text-white w-[28px] h-[28px] " />
             </button>
-            <span className="mobile_menu cursor-pointer hidden max-xl:block">
+            <span className="cursor-pointer hidden max-xl:block">
               <FaBars className="text-white w-[28px] h-[28px] " />
             </span>
           </div>
@@ -73,11 +73,3 @@ const Header = () => {
 };
 
 export default Header;
-
-// .mobile_menu {
-//   cursor: pointer;
-// }
-// .mobile_menu {
-//   font-weight: 600;
-//   display: none;
-// }

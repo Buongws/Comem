@@ -31,10 +31,7 @@ const Contact = () => {
           </form>
         </div>
         <div className="header-logo">
-          <Link
-            to="/"
-            className=" w-[200px] h-[150px] flex items-center justify-center"
-          >
+          <Link to="/" className=" w-[165px] h-[60px] flex items-center justify-center">
             <img src={logo} alt="logo" />
           </Link>
         </div>

@@ -24,7 +24,7 @@ export const datas = [
     ],
     rating: 3.5,
     category: "Trang Điểm",
-    brand: "Nước tẩy trang",
+    brand: "DEGREY",
     bestSeller: false,
     max: 20,
     thumbnails: {
@@ -71,7 +71,7 @@ export const datas = [
     colors: ["Màu hồng", "Màu vàng"],
     rating: 4.5,
     category: "Trang Điểm",
-    brand: "Rửa mặt",
+    brand: "DEGREY",
     bestSeller: true,
     max: 16,
     thumbnails: {
@@ -118,7 +118,7 @@ export const datas = [
     colors: ["Màu hồng", "Màu vàng", "Màu Xanh"],
     rating: 3,
     category: "Trang Điểm",
-    brand: "Son",
+    brand: "DEGREY",
     bestSeller: false,
     max: 17,
     thumbnails: {
@@ -165,7 +165,7 @@ export const datas = [
     colors: ["Màu hồng", "Màu vàng", "Màu Xanh"],
     rating: 5,
     category: "Trang Điểm",
-    brand: "Rửa mặt",
+    brand: "DEGREY",
     bestSeller: false,
     max: 15,
     thumbnails: {
@@ -213,7 +213,7 @@ export const datas = [
     colors: ["Màu hồng", "Màu vàng", "Màu Tím"],
     rating: 4.5,
     category: "Da",
-    brand: "Rửa mặt",
+    brand: "DEGREY",
     bestSeller: true,
     max: 11,
     thumbnails: {
@@ -260,7 +260,7 @@ export const datas = [
     colors: ["Màu hồng", "Màu vàng", "Màu Tím"],
     rating: 4,
     category: "Da",
-    brand: "Tẩy trang",
+    brand: "DEGREY",
     bestSeller: true,
     max: 11,
     thumbnails: {
@@ -307,7 +307,7 @@ export const datas = [
     colors: ["Màu hồng", "Màu Tím"],
     rating: 5,
     category: "Da",
-    brand: "Rửa mặt",
+    brand: "ClownZ",
     bestSeller: false,
     max: 30,
     thumbnails: {
@@ -353,7 +353,7 @@ export const datas = [
     colors: ["Màu Vàng", "Màu Đỏ"],
     rating: 2.5,
     category: "Da",
-    brand: "Rửa mặt",
+    brand: "ClownZ",
     bestSeller: true,
     max: 31,
     thumbnails: {
@@ -401,7 +401,7 @@ export const datas = [
     colors: ["Màu Vàng", "Màu Đen"],
     rating: 5,
     category: "Cơ thể",
-    brand: "Xà bông",
+    brand: "ClownZ",
     bestSeller: false,
     max: 14,
     thumbnails: {
@@ -448,7 +448,7 @@ export const datas = [
     colors: ["Màu Đen", "Màu Đỏ", "Màu Hồng", "Màu Vàng"],
     rating: 3,
     category: "Cơ thể",
-    brand: "Xà bông",
+    brand: "ClownZ",
     bestSeller: false,
     max: 11,
     thumbnails: {
@@ -495,7 +495,7 @@ export const datas = [
     colors: ["Màu Đen", "Màu Đỏ", "Màu Hồng", "Màu Vàng"],
     rating: 4,
     category: "Cơ thể",
-    brand: "Xà bông",
+    brand: "Ssstutter",
     bestSeller: true,
     max: 12,
     thumbnails: {
@@ -542,7 +542,7 @@ export const datas = [
     colors: ["Màu Đen", "Màu Đỏ", "Màu Hồng", "Màu Vàng"],
     rating: 4.5,
     category: "Cơ thể",
-    brand: "Xà bông",
+    brand: "Ssstutter",
     bestSeller: false,
     max: 20,
     thumbnails: {
@@ -590,7 +590,7 @@ export const datas = [
     colors: ["Màu Vàng", "Màu Đen"],
     rating: 1,
     category: "Hương thơm",
-    brand: "Nước Hoa",
+    brand: "Ssstutter",
     bestSeller: false,
     max: 15,
     thumbnails: {
@@ -637,7 +637,7 @@ export const datas = [
     colors: ["Màu Đen", "Màu Đỏ", "Màu Vàng"],
     rating: 4,
     category: "Hương thơm",
-    brand: "Nước Hoa",
+    brand: "Vascara",
     bestSeller: false,
     max: 11,
     thumbnails: {
@@ -684,7 +684,7 @@ export const datas = [
     colors: ["Màu Đen", "Màu Đỏ"],
     rating: 4.5,
     category: "Hương thơm",
-    brand: "Nước Hoa",
+    brand: "Vascara",
     bestSeller: false,
     max: 15,
     thumbnails: {
@@ -731,7 +731,7 @@ export const datas = [
     colors: ["Màu Đen", "Màu Vàng"],
     rating: 5,
     category: "Hương thơm",
-    brand: "Nước Hoa",
+    brand: "Vascara",
     bestSeller: false,
     max: 28,
     thumbnails: {
@@ -779,7 +779,7 @@ export const datas = [
     colors: ["Màu Vàng", "Màu Vàng"],
     rating: 5,
     category: "Quà tặng",
-    brand: "Hộp quà",
+    brand: "Vascara",
     bestSeller: true,
     max: 10,
     thumbnails: {
@@ -826,7 +826,7 @@ export const datas = [
     colors: ["Màu Vàng", "Màu Đen"],
     rating: 5,
     category: "Quà tặng",
-    brand: "Hộp quà",
+    brand: "Vascara",
     bestSeller: true,
     max: 15,
     thumbnails: {
@@ -873,7 +873,7 @@ export const datas = [
     colors: ["Màu Vàng", "Màu Hồng"],
     rating: 4,
     category: "Quà tặng",
-    brand: "Hộp quà",
+    brand: "Adidas",
     bestSeller: false,
     max: 15,
     thumbnails: {
@@ -920,7 +920,7 @@ export const datas = [
     colors: ["Màu Vàng", "Màu Đen"],
     rating: 5,
     category: "Quà tặng",
-    brand: "Hộp quà",
+    brand: "Adidas",
     bestSeller: false,
     max: 30,
     thumbnails: {
@@ -969,7 +969,7 @@ export const datas = [
     colors: ["Màu Vàng"],
     rating: 4,
     category: "Khác",
-    brand: "Hộp quà",
+    brand: "Adidas",
     bestSeller: false,
     max: 20,
     thumbnails: {
@@ -1017,7 +1017,7 @@ export const datas = [
     colors: ["Màu Vàng"],
     rating: 5,
     category: "Khác",
-    brand: "Hộp quà",
+    brand: "Adidas",
     bestSeller: true,
     max: 15,
     thumbnails: {
@@ -1065,7 +1065,7 @@ export const datas = [
     colors: ["Màu Vàng"],
     rating: 5,
     category: "Khác",
-    brand: "Túi Nhỏ",
+    brand: "Adidas",
     bestSeller: true,
     max: 5,
     thumbnails: {
@@ -1112,7 +1112,7 @@ export const datas = [
     colors: ["Màu Vàng"],
     rating: 5,
     category: "Khác",
-    brand: "Hộp quà",
+    brand: "Adidas",
     bestSeller: true,
     max: 5,
     thumbnails: {

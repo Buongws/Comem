@@ -58,10 +58,13 @@ const filterSlice = createSlice({
       state.filters.category = action.payload.category || state.filters.category;
       state.filters.text = action.payload.text || state.filters.text;
       state.filters.brand = action.payload.brand || state.filters.brand;
-
-      console.log(state.filters.brand, state.filters.category, state.filters.text);
+      state.filters.price = action.payload.price || state.filters.price;
 
       let tempFilter = [];
+      let MaxPrice = state.originalData.map((pr) => pr.price);
+      let maxPrices = Math.max(...MaxPrice);
+
+      console.log(maxPrices);
       //filter input search
       tempFilter = state.originalData.filter((product) => {
         return product.name.toLowerCase().includes(state.filters.text);
@@ -70,27 +73,18 @@ const filterSlice = createSlice({
       //filter category
       if (state.filters.category.toLowerCase() !== "all") {
         tempFilter = tempFilter.filter((it) => it.category === state.filters.category);
-        console.log(tempFilter);
       }
 
       // filter brand
       if (state.filters.brand.toLowerCase() !== "all") {
         tempFilter = tempFilter.filter((it) => it.brand === state.filters.brand);
-        console.log(tempFilter);
       }
-      // tempFilter = tempFilter.filter(
-      //   (it) => it.brand.toLowerCase() === state.filters.brand.toLowerCase()
-      // );
-      // if (state.filters.brand.toLowerCase() !== "all") {
-      //   tempFilter = state.originalData.filter((i) => {
-      //     return i.brand.toLowerCase() === state.filters.brand.toLowerCase();
-      //   });
-      // }
+      //  Filter Price
+      if (state.filters.price.toLowerCase() !== "all") {
+        // maxPrice = Math.max(...maxPrice);
 
-      // if (state.filters.brand.toLowerCase() !== "all") {
-      //   tempFilter = tempFilter.filter((it) => it.brand === state.brand.category);
-      //   console.log(tempFilter);
-      // }
+        tempFilter = tempFilter.filter((item) => item.price <= parseInt(state.filters.price, 10));
+      }
 
       state.filteredProducts = tempFilter;
     },

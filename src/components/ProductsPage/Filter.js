@@ -4,7 +4,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { cartFilterActions } from "../../redux/cartFilter";
-
+import { formatPrice } from "../../utils/Help";
 const Filter = () => {
   const { originalData, filteredProducts, filters } = useSelector((store) => store.filter);
 
@@ -24,38 +24,12 @@ const Filter = () => {
     const newBrand = e.currentTarget.value;
     dispatch(cartFilterActions.updateFiltersText({ brand: newBrand }));
   };
-  console.log(
-    originalData.reduce(
-      (pre, val, i) => {
-        const checkExistCategory = pre.findIndex((it) => it.category === val.category);
+  const updatePrice = (e) => {
+    const newPrice = e.currentTarget.value;
+    console.log(newPrice);
+    dispatch(cartFilterActions.updateFiltersText({ price: newPrice }));
+  };
 
-        const checkIDinFilterSearch = filteredProducts.findIndex((it) => {
-          return it.id === originalData[i].id;
-        });
-
-        //not exist cate + id not in filter
-        if (checkExistCategory === -1 && checkIDinFilterSearch === -1) {
-          pre.push({ category: val.category, quantity: 0 });
-          return pre;
-        }
-
-        //not exist cate + id in filter
-        if (checkExistCategory === -1 && checkIDinFilterSearch !== -1) {
-          pre.push({ category: val.category, quantity: 1 });
-          return pre;
-        }
-
-        //exist cate +  in filter
-        if (checkExistCategory !== -1 && checkIDinFilterSearch !== -1) {
-          pre[checkExistCategory].quantity += 1;
-          return pre;
-        }
-
-        return pre;
-      },
-      [{ category: "All", quantity: originalData.length }]
-    )
-  );
   return (
     <div>
       <h3 className="text-[20px] font-bold text-[#4c503d] uppercase pb-[15px]">
@@ -75,6 +49,8 @@ const Filter = () => {
       </form>
       {/* CATEGORY */}
       <div>
+        <h5 className="text-[26px] text-[#738136] font-semibold"> Bộ Lọc</h5>
+        <hr />
         {originalData
           .reduce(
             (pre, val, i) => {
@@ -109,12 +85,15 @@ const Filter = () => {
 
           .map((c, index) => {
             return (
-              <div key={index}>
+              <div
+                key={index}
+                className="hover:bg-[#ebedef] transition delay-150 duration-300 ease-in-out pl-[15px] rounded-xl"
+              >
                 <button
                   key={index}
                   name="category"
                   type="button"
-                  className="text-[#738136] leading-[42px]"
+                  className="text-[#738136] leading-[42px] "
                   onClick={updateCategory}
                 >
                   {c.category}
@@ -129,8 +108,14 @@ const Filter = () => {
       {/* Products */}
       <>
         <div className="form-control">
-          <h5> Brand </h5>
-          <select name="company" value={brand} onChange={updateBrand} className="company">
+          <h5 className="text-[26px] text-[#738136] font-semibold"> Thương Hiệu </h5>
+          <hr />
+          <select
+            name="brand"
+            value={brand}
+            onChange={updateBrand}
+            className="p-[15px] hover:bg-[#ebedef] w-full rounded-xl transition delay-150 duration-300 ease-in-out"
+          >
             {originalData
               .reduce(
                 (pre, val, i) => {
@@ -149,6 +134,21 @@ const Filter = () => {
                 return <option key={index}>{c.brand}</option>;
               })}
           </select>
+        </div>
+      </>
+      {/* Price */}
+      <>
+        <div className="form-control">
+          <h5>price</h5>
+          <p className="">{formatPrice(price)}</p>
+          <input
+            type="range"
+            name="price"
+            onChange={updatePrice}
+            min={min_price}
+            max={max_price}
+            value={price}
+          />
         </div>
       </>
     </div>

@@ -59,12 +59,13 @@ const filterSlice = createSlice({
       state.filters.text = action.payload.text || state.filters.text;
       state.filters.brand = action.payload.brand || state.filters.brand;
       state.filters.price = action.payload.price || state.filters.price;
+      state.filters.bestSeller = action.payload.bestSeller || state.filters.bestSeller;
 
       let tempFilter = [];
-      let MaxPrice = state.originalData.map((pr) => pr.price);
-      let maxPrices = Math.max(...MaxPrice);
+      // let MaxPrice = state.originalData.map((pr) => pr.price);
+      // let maxPrices = Math.max(...MaxPrice);
 
-      console.log(maxPrices);
+      // console.log(maxPrices);
       //filter input search
       tempFilter = state.originalData.filter((product) => {
         return product.name.toLowerCase().includes(state.filters.text);
@@ -80,13 +81,23 @@ const filterSlice = createSlice({
         tempFilter = tempFilter.filter((it) => it.brand === state.filters.brand);
       }
       //  Filter Price
-      if (state.filters.price.toLowerCase() !== "all") {
-        // maxPrice = Math.max(...maxPrice);
+      // if (state.filters.price.toLowerCase() !== "all") {
+      //   // maxPrice = Math.max(...maxPrice);
 
-        tempFilter = tempFilter.filter((item) => item.price <= parseInt(state.filters.price, 10));
+      //   tempFilter = tempFilter.filter((item) => item.price <= parseInt(state.filters.price, 10));
+      // }
+
+      // FilterBestSeller
+      if (state.filters.bestSeller) {
+        tempFilter = tempFilter.filter((it) => {
+          return it.bestSeller === true;
+        });
       }
 
       state.filteredProducts = tempFilter;
+    },
+    clearCart(state, action) {
+      state.filteredProducts = state.originalData;
     },
   },
 });

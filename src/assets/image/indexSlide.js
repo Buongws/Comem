@@ -21,6 +21,7 @@ import source7 from "./source-7.png";
 import source8 from "./source-8.png";
 import source9 from "./source-9.png";
 import bgProduct from "./bg-product.jpg";
+import bgSideBar from "./bg-sidebar.jpg";
 
 export {
   Slide1,
@@ -45,4 +46,5 @@ export {
   source8,
   source9,
   bgProduct,
+  bgSideBar,
 };

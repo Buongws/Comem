@@ -62,10 +62,8 @@ const filterSlice = createSlice({
       state.filters.bestSeller = action.payload.bestSeller || state.filters.bestSeller;
 
       let tempFilter = [];
-      // let MaxPrice = state.originalData.map((pr) => pr.price);
-      // let maxPrices = Math.max(...MaxPrice);
 
-      // console.log(maxPrices);
+      console.log(state.filters.bestSeller);
       //filter input search
       tempFilter = state.originalData.filter((product) => {
         return product.name.toLowerCase().includes(state.filters.text);
@@ -81,23 +79,28 @@ const filterSlice = createSlice({
         tempFilter = tempFilter.filter((it) => it.brand === state.filters.brand);
       }
       //  Filter Price
-      // if (state.filters.price.toLowerCase() !== "all") {
-      //   // maxPrice = Math.max(...maxPrice);
-
+      // if (state.filters.price.toLowerCase()) {
       //   tempFilter = tempFilter.filter((item) => item.price <= parseInt(state.filters.price, 10));
       // }
 
       // FilterBestSeller
-      if (state.filters.bestSeller) {
+      if (action.payload.bestSeller) {
         tempFilter = tempFilter.filter((it) => {
           return it.bestSeller === true;
         });
       }
+      // let MaxPrice = state.originalData.map((pr) => pr.price);
+      // let maxPrices = Math.max(...MaxPrice);
 
+      // state.filters.price = maxPrices;
+      // state.filters.max_price = maxPrices;
       state.filteredProducts = tempFilter;
     },
     clearCart(state, action) {
       state.filteredProducts = state.originalData;
+      state.sort = "price-lowest";
+
+      // state.filters.bestSeller = state.filters.bestSeller;
     },
   },
 });

@@ -2,46 +2,53 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/image/logo_co_mem_1565603099.png";
 import { FaShoppingBag, FaUser, FaBars } from "react-icons/fa";
-
-import "../../index.css";
-
-import { links } from "../../assets/data/links";
-
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import "../../index.css";
+import { cartSliceAction } from "../../redux/cartSlice";
+import { links } from "../../assets/data/links";
 
 const Header = () => {
   const headerRef = useRef(null);
 
   const amount = useSelector((store) => store.cart.amount);
 
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        headerRef.current.classList.add("header_shrink");
-      } else {
-        headerRef.current.classList.remove("header_shrink");
-      }
-    });
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", () => {
+  //     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+  //       headerRef.current.classList.add("header_shrink");
+  //     } else {
+  //       headerRef.current.classList.remove("header_shrink");
+  //     }
+  //   });
+  // }, []);
 
+  const { opensiderBarContent } = useSelector((store) => store.cart);
+
+  const dispatch = useDispatch();
+
+  const onToggleChangeSideBar = () => {
+    console.log(opensiderBarContent);
+    dispatch(cartSliceAction.toggleSideBarOpen(opensiderBarContent));
+  };
   return (
     <header
       className="relative top-0 left-0 right-0 bg-[url('/src/assets/image/background.jpg')]"
       ref={headerRef}
     >
-      <div className="nav-center ">
-        <div className="header-top flex items-center justify-between pr-[20px] pl-[20px] max-w-[80%] w-[100%] m-auto">
+      <div className="nav-center max-xl:p-[20px] ">
+        <div className="header-top flex items-center justify-between pr-[20px] pl-[20px] max-w-[80%] w-[100%] m-auto ">
           <div className="header-logo">
             <Link to="/" className="  flex items-center justify-center">
               <img src={logo} alt="logo" className="w-[165px] h-[60px]" />
             </Link>
           </div>
-          <div className="header-nav-links max-xl:hidden">
+          <div className="header-nav-links  max-xl:hidden">
             <ul className="flex">
               {links.map((link) => {
                 const { id, text, url } = link;
                 return (
-                  <li key={id} className="text-white ">
+                  <li key={id} className="text-white ml-[30px] ">
                     <Link to={url} className="nav-links nav-link-ltr ">
                       {text}
                     </Link>
@@ -62,9 +69,12 @@ const Header = () => {
             <button type="button" className="mr-[30px] ">
               <FaUser className="text-white w-[28px] h-[28px] " />
             </button>
-            <span className="cursor-pointer hidden max-xl:block">
+            <button
+              className={`hidden max-xl:block ${opensiderBarContent ? "max-lg:block" : "hidden"}`}
+              onClick={onToggleChangeSideBar}
+            >
               <FaBars className="text-white w-[28px] h-[28px] " />
-            </span>
+            </button>
           </div>
         </div>
       </div>
@@ -73,3 +83,6 @@ const Header = () => {
 };
 
 export default Header;
+
+// max - xl: block
+// hidden

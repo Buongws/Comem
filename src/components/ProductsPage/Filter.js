@@ -31,6 +31,8 @@ const Filter = () => {
   };
   const updateBestSeller = (e) => {
     const newBestSeller = e.target.checked;
+    console.log(newBestSeller);
+
     dispatch(cartFilterActions.updateFiltersText({ bestSeller: newBestSeller }));
   };
   return (
@@ -88,7 +90,7 @@ const Filter = () => {
               return (
                 <div
                   key={index}
-                  className="hover:bg-[#ebedef] transition delay-150 duration-300 ease-in-out pl-[15px] rounded-xl"
+                  className="hover:bg-[#ebedef] transition delay-150 duration-300 ease-in-out pl-[15px]"
                 >
                   <button
                     key={index}
@@ -115,7 +117,7 @@ const Filter = () => {
               name="brand"
               value={brand}
               onChange={updateBrand}
-              className="p-[15px] hover:bg-[#ebedef] w-full rounded-xl transition delay-150 duration-300 ease-in-out"
+              className="p-[15px] hover:bg-[#ebedef] w-full transition delay-150 duration-300 ease-in-out mt-2 mb-3"
             >
               {originalData
                 .reduce(
@@ -140,7 +142,9 @@ const Filter = () => {
         {/* Price */}
         <>
           <div className="form-control">
-            <h5>price</h5>
+            <h5 className="text-[26px] text-[#738136] font-semibold">Mức Giá</h5>
+            <hr />
+
             <p className="">{formatPrice(price)}</p>
             <input
               type="range"
@@ -153,14 +157,16 @@ const Filter = () => {
           </div>
         </>
         {/* best Seller */}
-        <div className="form-control shipping">
-          <label htmlFor="shipping">FREE SHIPPING</label>
+        <div className="form-control bestSeller m-[15px]">
+          <label className="text-[26px] text-[#738136] font-semibold ">Best Seller</label>
+
           <input
+            className="ml-[15px] h-[18px] w-[18px]"
             type="checkbox"
-            name="shipping"
-            id="shipping"
+            name="bestSeller"
+            id="bestSeller"
             onChange={updateBestSeller}
-            checked={bestSeller}
+            defaultChecked={bestSeller}
           ></input>
         </div>
       </form>

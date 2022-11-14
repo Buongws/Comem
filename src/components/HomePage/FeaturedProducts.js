@@ -9,9 +9,7 @@ const FeaturedProducts = () => {
   return (
     <div className="container pt-[60px] text-center ">
       <div className="title ">
-        <h2 className="mb-[30px] font-semibold text-[#4c503d]">
-          SẢN PHẨM ƯU ĐÃI{" "}
-        </h2>
+        <h2 className="mb-[30px] font-semibold text-[#4c503d]">SẢN PHẨM ƯU ĐÃI </h2>
         <div className="underline"></div>
       </div>
       <div className="section-center text-black gap-[30px] grid grid-cols-4 m-auto max-lg:grid-cols-2 max-sm:grid-cols-1 ">
@@ -19,9 +17,13 @@ const FeaturedProducts = () => {
           .filter((data) => data.bestSeller === true)
           .map((item) => {
             return (
-              <div className="card border-solid border-[1px] rounded-[10px] hover:shadow-lg hover:scale-110 ease-in-out flex flex-col">
-                <div className="pb-[10%]">
-                  <img src={item.image[0]} alt={item.name} />
+              <div className="card border-solid border-[1px] rounded-[10px] hover:shadow-lg  ease-in-out flex flex-col">
+                <div className="pb-[10%] overflow-hidden ">
+                  <img
+                    src={item.image[0]}
+                    alt={item.name}
+                    className="hover:scale-[110%] transition delay-75 duration-300  ease-in-out w-full"
+                  />
                 </div>
                 <div className="p-[20px] flex-1 flex flex-col justify-between">
                   <h2 className="text-[16.5px] mb-[15px] font-medium">

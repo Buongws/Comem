@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { datas } from "../assets/data/data";
 import { FcCheckmark } from "react-icons/fc";
+import { v4 as uuid } from "uuid";
 
 import Stars from "../components/SingleProductsPage/Stars";
 import InfoProducts from "../components/SingleProductsPage/InfoProducts";
@@ -9,34 +10,37 @@ import Material from "../components/SingleProductsPage/Material";
 import { FcApproval } from "react-icons/fc";
 import { formatPrice } from "../utils/Help";
 import AddToCart from "../components/SingleProductsPage/AddToCart";
+import PageHero from "../components/Hero/PageHero";
 
 const SingleProducts = () => {
   const { id } = useParams();
   const product = datas.find((product) => product.id === id);
   const { name, price, rating, category, brand, max, image, titleTag, review, info, thumbnails } =
     product;
-  console.log(thumbnails);
-
+  // console.log(id);
   const [main, setMain] = useState(0);
 
   return (
     <div>
+      <PageHero title={name} product={name} />
       <div className="container-medium grid grid-cols-2 pt-[50px]  max-lg:grid-cols-1">
         <div className="singlePage-left ">
           <section>
-            <img src={image[main]} alt="img" className="h-[510px] w-full block object-cover" />
+            <img src={image[main]} alt="img" className=" w-full block object-cover" />
             <div className="mt-[14px] grid grid-cols-5 gap-4 ">
               {image.map((img, index) => {
                 return (
-                  <img
-                    src={img}
-                    key={index}
-                    alt="img"
-                    onClick={() => setMain(index)}
-                    className={`h-[100px] cursor-pointer ease-in-out duration-700 hover:scale-90 ${
-                      main === index ? `shadow-2xl border-2 border-solid border-[#de8d1e]` : null
-                    } `}
-                  />
+                  <div>
+                    <img
+                      src={img}
+                      alt="img"
+                      key={index}
+                      onClick={() => setMain(index)}
+                      className={`h-[100px] cursor-pointer ease-in-out duration-700 hover:scale-90 ${
+                        main === index ? `shadow-2xl border-2 border-solid border-[#de8d1e]` : null
+                      } `}
+                    />
+                  </div>
                 );
               })}
             </div>
@@ -74,19 +78,17 @@ const SingleProducts = () => {
             </h5>
             <AddToCart product={product} />
 
-            <p className="info grid grid-cols-2 gap-[5px]">
-              {info.map((i) => {
+            <div className="info grid grid-cols-2 gap-[5px]">
+              {info.map((i, index) => {
                 return (
-                  <div className="">
-                    <div className="pl-[5px] pr-[5px]  ">
-                      <span>
-                        <FcCheckmark className="inline-block" />  {i}
-                      </span>
-                    </div>
+                  <div className="pl-[5px] pr-[5px]">
+                    <span>
+                      <FcCheckmark className="inline-block" key={index} />  {i}
+                    </span>
                   </div>
                 );
               })}
-            </p>
+            </div>
             <hr />
           </section>
           <div className="fomo mt-[15px]">

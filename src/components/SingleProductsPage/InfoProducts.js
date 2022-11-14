@@ -1,27 +1,25 @@
 import React from "react";
 import { useState } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import PageHero from "../Hero/PageHero";
 const InfoProducts = ({ thumbnails }) => {
   const { description } = thumbnails;
-
   const [showInfo, setShowInfo] = useState(false);
 
   return (
     <section className="pt-[30px]">
       <div className="InfoProducts">
         <div className="container-medium details flex justify-between item-center ">
-          <h2 className=" text-[#4c503d] text-[22px]  font-semibold">
-            THÔNG TIN SẢN PHẨM
-          </h2>
+          <h2 className=" text-[#4c503d] text-[22px]  font-semibold ">THÔNG TIN SẢN PHẨM </h2>
           <button
-            className="p-[8px] bg-[#738136] rounded-full text-white"
+            className="p-[8px] bg-[#738136] rounded-full text-white ml-[15px]"
             onClick={() => setShowInfo(!showInfo)}
           >
             {showInfo ? <AiOutlineMinus /> : <AiOutlinePlus />}
           </button>
         </div>
         {showInfo && (
-          <div className="container-small content pt-[30px]">
+          <div className="container-medium content pt-[30px]">
             <div className="pb-[15px]">
               <h3>1. Thành Phần</h3>
               <p>{description[0]}</p>

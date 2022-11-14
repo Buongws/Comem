@@ -2,7 +2,9 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import { datas } from "../../assets/data/data";
+import { Link } from "react-router-dom";
+import { formatPrice } from "../../utils/Help";
 import {
   source1,
   source2,
@@ -25,31 +27,35 @@ const Material = ({ thumbnails }) => {
     slidesToScroll: 2,
   };
   return (
-    <div className="container">
-      <h2> Single Item</h2>
-      <Slider {...settings} className="pt-[30px] pb-[30px]">
-        {material.map((matel) => {
+    <div className="container-medium">
+      <h2 className=" text-[#4c503d] text-[22px]  font-semibold">SẢN PHẨM LIÊN QUAN</h2>
+
+      <div className="section-center text-black gap-[30px] grid grid-cols-4 m-auto max-lg:grid-cols-2 max-sm:grid-cols-1 pt-[40px] pb-[40px]">
+        {datas.slice(0, 4).map((item, index) => {
           return (
-            <div>
-              <div className="resource-grid-top flex flex-col bg-[#66883f] rounded-[20px] p-[20px]">
-                <div className="resource-img  h-[200px] mt-[-75px] max-lg:mt-[0px] ">
-                  <img
-                    src={source1}
-                    alt="source"
-                    className="bg-cover h-full w-full object-contain"
-                  />
-                </div>
-                <div className="resource-text text-[15.5px] p-[10px] flex-1 flex flex-col justify-between text-center ">
-                  <h3 className="text-white font-medium mb-[15px] mt-[15px] cursor-pointer title-resource">
-                    Lá Bạc Hà
-                  </h3>
-                  <p className="m-auto text-white">{matel}</p>
-                </div>
+            <div
+              key={index}
+              className="card border-solid border-[1px] rounded-[10px] hover:shadow-lg  ease-in-out flex flex-col"
+            >
+              <div className="pb-[10%] overflow-hidden">
+                <img
+                  src={item.image[0]}
+                  alt={item.name}
+                  className="hover:scale-[110%] transition delay-75 duration-300  ease-in-out w-full"
+                />
+              </div>
+              <div className="p-[20px] flex-1 flex flex-col justify-between">
+                <h2 className="text-[16.5px] mb-[15px] font-medium">
+                  {`${item.name.substring(0, 100)}...`}
+                </h2>
+                <Link to={`/products/${item.id}`} className="btn pt-[10px]">
+                  {formatPrice(item.price)}
+                </Link>
               </div>
             </div>
           );
         })}
-      </Slider>
+      </div>
     </div>
   );
 };

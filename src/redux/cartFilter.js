@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 import { datas } from "../assets/data/data";
+import { findMaxPrice } from "../utils/Help";
 
 const initialState = {
   originalData: datas,
@@ -12,7 +13,7 @@ const initialState = {
     brand: "all",
     colors: "all",
     min_price: 0,
-    max_price: 0,
+    max_price: findMaxPrice(datas.map((it) => it.price)),
     price: 0,
     bestSeller: false,
   },
@@ -56,24 +57,24 @@ const filterSlice = createSlice({
 
     updateFiltersText(state, action) {
       state.filters.category = action.payload.category || state.filters.category;
-      state.filters.text = action.payload.text || state.filters.text;
+      state.filters.text = action.payload.text || "";
       state.filters.brand = action.payload.brand || state.filters.brand;
       state.filters.price = action.payload.price || state.filters.price;
       state.filters.bestSeller = action.payload.bestSeller || state.filters.bestSeller;
 
       let tempFilter = [];
 
-      console.log(state.filters.bestSeller);
+      console.log(state.filters.category);
       //filter input search
       tempFilter = state.originalData.filter((product) => {
         return product.name.toLowerCase().includes(state.filters.text);
       });
 
+      console.log(tempFilter);
       //filter category
       if (state.filters.category.toLowerCase() !== "all") {
         tempFilter = tempFilter.filter((it) => it.category === state.filters.category);
       }
-
       // filter brand
       if (state.filters.brand.toLowerCase() !== "all") {
         tempFilter = tempFilter.filter((it) => it.brand === state.filters.brand);
@@ -89,9 +90,11 @@ const filterSlice = createSlice({
           return it.bestSeller === true;
         });
       }
-      // let MaxPrice = state.originalData.map((pr) => pr.price);
-      // let maxPrices = Math.max(...MaxPrice);
 
+      state.filters.price = findMaxPrice(tempFilter.map((it) => it.price));
+      state.filters.max_price = findMaxPrice(tempFilter.map((it) => it.price));
+
+      // console.log(maxPrices);
       // state.filters.price = maxPrices;
       // state.filters.max_price = maxPrices;
       state.filteredProducts = tempFilter;
@@ -100,7 +103,7 @@ const filterSlice = createSlice({
       state.filteredProducts = state.originalData;
       state.sort = "price-lowest";
 
-      // state.filters.bestSeller = state.filters.bestSeller;
+      state.filters.bestSeller = false;
     },
   },
 });

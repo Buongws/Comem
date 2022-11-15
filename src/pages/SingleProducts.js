@@ -15,8 +15,7 @@ import PageHero from "../components/Hero/PageHero";
 const SingleProducts = () => {
   const { id } = useParams();
   const product = datas.find((product) => product.id === id);
-  const { name, price, rating, category, brand, max, image, titleTag, review, info, thumbnails } =
-    product;
+  const { name, price, rating, image, titleTag, review, info, thumbnails } = product;
   // console.log(id);
   const [main, setMain] = useState(0);
 
@@ -30,11 +29,10 @@ const SingleProducts = () => {
             <div className="mt-[14px] grid grid-cols-5 gap-4 ">
               {image.map((img, index) => {
                 return (
-                  <div>
+                  <div key={index}>
                     <img
                       src={img}
                       alt="img"
-                      key={index}
                       onClick={() => setMain(index)}
                       className={`h-[100px] cursor-pointer ease-in-out duration-700 hover:scale-90 ${
                         main === index ? `shadow-2xl border-2 border-solid border-[#de8d1e]` : null
@@ -81,9 +79,9 @@ const SingleProducts = () => {
             <div className="info grid grid-cols-2 gap-[5px]">
               {info.map((i, index) => {
                 return (
-                  <div className="pl-[5px] pr-[5px]">
+                  <div className="pl-[5px] pr-[5px]" key={index}>
                     <span>
-                      <FcCheckmark className="inline-block" key={index} />  {i}
+                      <FcCheckmark className="inline-block" />  {i}
                     </span>
                   </div>
                 );

@@ -9,15 +9,17 @@ const Filter = () => {
   const { originalData, filteredProducts, filters } = useSelector((store) => store.filter);
 
   const { text, category, brand, colors, min_price, max_price, price, bestSeller } = filters;
-
+  console.log(max_price);
   const dispatch = useDispatch();
 
   const updateText = (e) => {
     const newSearchInput = e.currentTarget.value;
+    console.log(newSearchInput);
     dispatch(cartFilterActions.updateFiltersText({ text: newSearchInput }));
   };
   const updateCategory = (e) => {
     const newCategory = e.currentTarget.textContent;
+    console.log(newCategory);
     dispatch(cartFilterActions.updateFiltersText({ category: newCategory }));
   };
   const updateBrand = (e) => {
@@ -161,12 +163,12 @@ const Filter = () => {
           <label className="text-[26px] text-[#738136] font-semibold ">Best Seller</label>
 
           <input
+            checked={bestSeller}
             className="ml-[15px] h-[18px] w-[18px]"
             type="checkbox"
             name="bestSeller"
             id="bestSeller"
             onChange={updateBestSeller}
-            defaultChecked={bestSeller}
           ></input>
         </div>
       </form>

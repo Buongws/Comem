@@ -4,6 +4,7 @@ import { formatPrice } from "../../utils/Help";
 import { Link } from "react-router-dom";
 
 import { datas } from "../../assets/data/data";
+import { useSelector } from "react-redux";
 
 const FeaturedProducts = () => {
   return (
@@ -15,13 +16,17 @@ const FeaturedProducts = () => {
       <div className="section-center text-black gap-[30px] grid grid-cols-4 m-auto max-lg:grid-cols-2 max-sm:grid-cols-1 ">
         {datas
           .filter((data) => data.bestSeller === true)
-          .map((item) => {
+          .map((item, index) => {
             return (
-              <div className="card border-solid border-[1px] rounded-[10px] hover:shadow-lg  ease-in-out flex flex-col">
+              <div
+                className="card border-solid border-[1px] rounded-[10px] hover:shadow-lg  ease-in-out flex flex-col"
+                key={index}
+              >
                 <div className="pb-[10%] overflow-hidden ">
                   <img
                     src={item.image[0]}
                     alt={item.name}
+                    key={index}
                     className="hover:scale-[110%] transition delay-75 duration-300  ease-in-out w-full"
                   />
                 </div>

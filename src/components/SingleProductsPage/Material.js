@@ -27,7 +27,7 @@ const Material = ({ thumbnails }) => {
     slidesToScroll: 2,
   };
   return (
-    <div className="container-medium">
+    <div className="container-medium pt-[30px]">
       <h2 className=" text-[#4c503d] text-[22px]  font-semibold">SẢN PHẨM LIÊN QUAN</h2>
 
       <div className="section-center text-black gap-[30px] grid grid-cols-4 m-auto max-lg:grid-cols-2 max-sm:grid-cols-1 pt-[40px] pb-[40px]">
@@ -48,7 +48,7 @@ const Material = ({ thumbnails }) => {
                 <h2 className="text-[16.5px] mb-[15px] font-medium">
                   {`${item.name.substring(0, 100)}...`}
                 </h2>
-                <Link to={`/products/${item.id}`} className="btn pt-[10px]">
+                <Link to={`/products/${item.id}`} className="btn pt-[10px] text-center">
                   {formatPrice(item.price)}
                 </Link>
               </div>

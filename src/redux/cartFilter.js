@@ -60,7 +60,7 @@ const filterSlice = createSlice({
       state.filters.text = action.payload.text || "";
       state.filters.brand = action.payload.brand || state.filters.brand;
       state.filters.price = action.payload.price || state.filters.price;
-      state.filters.bestSeller = action.payload.bestSeller || state.filters.bestSeller;
+      state.filters.bestSeller = action.payload.bestSeller;
 
       let tempFilter = [];
 
@@ -87,12 +87,15 @@ const filterSlice = createSlice({
       // FilterBestSeller
       if (action.payload.bestSeller) {
         tempFilter = tempFilter.filter((it) => {
-          return it.bestSeller === true;
+          return it.bestSeller === false ? false : true;
         });
       }
 
-      state.filters.price = findMaxPrice(tempFilter.map((it) => it.price));
-      state.filters.max_price = findMaxPrice(tempFilter.map((it) => it.price));
+      // if (state.filters.price > state.filters.max_price)
+      //   return (state.filters.price = state.filters.max_price);
+
+      // state.filters.price = findMaxPrice(tempFilter.map((it) => it.price));
+      // state.filters.max_price = findMaxPrice(tempFilter.map((it) => it.price));
 
       // console.log(maxPrices);
       // state.filters.price = maxPrices;

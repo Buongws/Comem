@@ -9,17 +9,17 @@ const Filter = () => {
   const { originalData, filteredProducts, filters } = useSelector((store) => store.filter);
 
   const { text, category, brand, colors, min_price, max_price, price, bestSeller } = filters;
-  console.log(max_price);
+  // console.log(max_price);
   const dispatch = useDispatch();
 
   const updateText = (e) => {
     const newSearchInput = e.currentTarget.value;
-    console.log(newSearchInput);
+
     dispatch(cartFilterActions.updateFiltersText({ text: newSearchInput }));
   };
   const updateCategory = (e) => {
     const newCategory = e.currentTarget.textContent;
-    console.log(newCategory);
+
     dispatch(cartFilterActions.updateFiltersText({ category: newCategory }));
   };
   const updateBrand = (e) => {
@@ -28,7 +28,7 @@ const Filter = () => {
   };
   const updatePrice = (e) => {
     const newPrice = e.currentTarget.value;
-    console.log(newPrice);
+
     dispatch(cartFilterActions.updateFiltersText({ price: newPrice }));
   };
   const updateBestSeller = (e) => {

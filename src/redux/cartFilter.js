@@ -14,7 +14,7 @@ const initialState = {
     colors: "all",
     min_price: 0,
     max_price: findMaxPrice(datas.map((it) => it.price)),
-    price: 0,
+    price: findMaxPrice(datas.map((it) => it.price)),
     bestSeller: false,
   },
 };
@@ -59,18 +59,15 @@ const filterSlice = createSlice({
       state.filters.category = action.payload.category || state.filters.category;
       state.filters.text = action.payload.text || "";
       state.filters.brand = action.payload.brand || state.filters.brand;
-      state.filters.price = action.payload.price || state.filters.price;
-      state.filters.bestSeller = action.payload.bestSeller;
+      state.filters.bestSeller = action.payload.bestSeller || false;
 
       let tempFilter = [];
 
-      console.log(state.filters.category);
       //filter input search
       tempFilter = state.originalData.filter((product) => {
         return product.name.toLowerCase().includes(state.filters.text);
       });
 
-      console.log(tempFilter);
       //filter category
       if (state.filters.category.toLowerCase() !== "all") {
         tempFilter = tempFilter.filter((it) => it.category === state.filters.category);
@@ -79,34 +76,32 @@ const filterSlice = createSlice({
       if (state.filters.brand.toLowerCase() !== "all") {
         tempFilter = tempFilter.filter((it) => it.brand === state.filters.brand);
       }
-      //  Filter Price
-      // if (state.filters.price.toLowerCase()) {
-      //   tempFilter = tempFilter.filter((item) => item.price <= parseInt(state.filters.price, 10));
-      // }
-
-      // FilterBestSeller
+      // Filter Best Seller
       if (action.payload.bestSeller) {
         tempFilter = tempFilter.filter((it) => {
           return it.bestSeller === false ? false : true;
         });
       }
+      //  Filter Price
+      state.filters.max_price = findMaxPrice(tempFilter.map((it) => it.price));
+      state.filters.price = action.payload.price || state.filters.max_price;
+      console.log(state.filters.max_price);
 
-      // if (state.filters.price > state.filters.max_price)
-      //   return (state.filters.price = state.filters.max_price);
+      if (state.filters.price > state.filters.max_price) {
+        state.filters.price = state.filters.max_price;
+      }
 
-      // state.filters.price = findMaxPrice(tempFilter.map((it) => it.price));
-      // state.filters.max_price = findMaxPrice(tempFilter.map((it) => it.price));
+      tempFilter = tempFilter.filter(
+        (item) =>
+          Number(item.price) >= Number(state.filters.min_price) &&
+          Number(item.price) <= Number(state.filters.price)
+      );
+      console.log(tempFilter);
 
-      // console.log(maxPrices);
-      // state.filters.price = maxPrices;
-      // state.filters.max_price = maxPrices;
       state.filteredProducts = tempFilter;
     },
     clearCart(state, action) {
-      state.filteredProducts = state.originalData;
-      state.sort = "price-lowest";
-      state.filters.brand = "all";
-      state.filters.bestSeller = false;
+      return initialState;
     },
   },
 });

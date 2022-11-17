@@ -39,10 +39,10 @@ const AddToCart = ({ product }) => {
       <div className="colors ">
         <span className="mb-[30px]">Màu Sắc : </span>
         <div>
-          {colors.map((color) => {
+          {colors.map((color, index) => {
             return (
               <button
-                key={id}
+                key={index}
                 className={` mb-[20px] ${
                   mainColor === color
                     ? `bg-[#738136] cursor-pointer rounded-3xl mr-3  pt-[5px] pb-[5px] pl-[10px] pr-[10px] text-white `

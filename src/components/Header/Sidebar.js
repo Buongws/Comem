@@ -7,6 +7,7 @@ import { HiHome } from "react-icons/hi";
 import { cartSliceAction } from "../../redux/cartSlice";
 import { bgSideBar } from "../../assets/image/indexSlide";
 import { FaShoppingBag, FaUser, FaBars } from "react-icons/fa";
+import cn from "classnames";
 const Sidebar = () => {
   const { opensiderBarContent, amount } = useSelector((store) => store.cart);
 
@@ -19,9 +20,12 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`bg-[black] h-[100vh] w-[40vw] xl:hidden ${
-        opensiderBarContent ? "fixed top-0 right-0 z-[99999]" : "hidden"
-      }`}
+      className={cn(
+        "bg-[black] h-[100vh] w-[40vw] xl:hidden fixed top-0 right-0 translate-x-full z-[99999] transition-transform duration-300",
+        {
+          "translate-x-0": opensiderBarContent,
+        }
+      )}
     >
       <div className="bg-[#92a052] w-full h-[100vh] relative border-l-2  shadow-2xl">
         <button

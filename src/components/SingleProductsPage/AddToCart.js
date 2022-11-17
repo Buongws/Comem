@@ -2,12 +2,17 @@ import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 import AmountButtons from "../ProductsPage/AmountButton";
-
+import { useDispatch } from "react-redux";
+import { cartSliceAction } from "../../redux/cartSlice";
 const AddToCart = ({ product }) => {
   const { id, colors, max } = product;
   const [mainColor, setMainColor] = useState(colors);
   const [amount, setAmount] = useState(1);
 
+  const dispatch = useDispatch();
+  const handleAddToCart = (product) => {
+    dispatch(cartSliceAction.addToCart(product));
+  };
   const increase = () => {
     setAmount((currentAmount) => {
       let increaseItem = currentAmount + 1;
@@ -53,9 +58,11 @@ const AddToCart = ({ product }) => {
       </div>
       <div className="btn-container">
         <AmountButtons amount={amount} increase={increase} decrease={decrease} />
-        <Link to="/cart" className="btn mt-[30px] mb-[30px]">
-          Thêm Vào Giỏ
-        </Link>
+        <button onClick={() => handleAddToCart(product)}>
+          <Link to="/cart" className="btn mt-[30px] mb-[30px]">
+            Thêm Vào Giỏ
+          </Link>
+        </button>
       </div>
     </main>
   );

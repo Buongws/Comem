@@ -4,7 +4,7 @@ const CartPage = () => {
   return (
     <div>
       <PageHero title=" Giỏ Hàng" />
-      CartPage
+      <div className="cart"></div>
     </div>
   );
 };

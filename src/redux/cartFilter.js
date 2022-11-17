@@ -105,7 +105,7 @@ const filterSlice = createSlice({
     clearCart(state, action) {
       state.filteredProducts = state.originalData;
       state.sort = "price-lowest";
-
+      state.filters.brand = "all";
       state.filters.bestSeller = false;
     },
   },

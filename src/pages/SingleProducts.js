@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { datas } from "../assets/data/data";
 import { FcCheckmark } from "react-icons/fc";
-import { v4 as uuid } from "uuid";
 
 import Stars from "../components/SingleProductsPage/Stars";
 import InfoProducts from "../components/SingleProductsPage/InfoProducts";
@@ -11,12 +10,17 @@ import { FcApproval } from "react-icons/fc";
 import { formatPrice } from "../utils/Help";
 import AddToCart from "../components/SingleProductsPage/AddToCart";
 import PageHero from "../components/Hero/PageHero";
+import { useSelector } from "react-redux";
 
 const SingleProducts = () => {
   const { id } = useParams();
-  const product = datas.find((product) => product.id === id);
+
+  const { originalDatas } = useSelector((store) => store.cart);
+
+  const product = originalDatas.find((product) => product.id === id);
+
   const { name, price, rating, image, titleTag, review, info, thumbnails } = product;
-  // console.log(id);
+
   const [main, setMain] = useState(0);
 
   return (

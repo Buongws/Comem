@@ -2,14 +2,33 @@ import React from "react";
 
 import { FaPlus, FaMinus } from "react-icons/fa";
 
-const AmountButtons = ({ amount, increase, decrease }) => {
+import { useDispatch, useSelector } from "react-redux";
+
+import { cartSliceAction } from "../../redux/cartSlice";
+
+const AmountButtons = ({ id, amount, colors }) => {
+  const dispatch = useDispatch();
+
   return (
     <main className="grid w-[150px] justify-center grid-cols-3 items-center">
-      <button type="button" onClick={decrease}>
+      <button
+        type="button"
+        onClick={() => {
+          if (amount === 1) {
+            dispatch(cartSliceAction.removeItem(id, colors));
+          }
+          dispatch(cartSliceAction.decrease({ id }));
+        }}
+      >
         <FaMinus />
       </button>
       <h2 className="amount">{amount}</h2>
-      <button type="button" onClick={increase}>
+      <button
+        type="button"
+        onClick={() => {
+          dispatch(cartSliceAction.increase({ id }));
+        }}
+      >
         <FaPlus />
       </button>
     </main>

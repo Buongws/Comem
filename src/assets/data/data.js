@@ -22,6 +22,7 @@ export const datas = [
       "Dưỡng môi Hết khô nẻ, hồng hào tự nhiên",
       "Đa năng Son lót, son dưỡng, mặt nạ ngủ, bôi nẻ má",
     ],
+
     rating: 3.5,
     category: "Trang Điểm",
     brand: "DEGREY",
@@ -69,6 +70,7 @@ export const datas = [
       "Đa năng Son lót, son dưỡng, mặt nạ ngủ, bôi nẻ má",
     ],
     colors: ["Màu hồng", "Màu vàng"],
+
     rating: 4.5,
     category: "Trang Điểm",
     brand: "DEGREY",
@@ -116,6 +118,7 @@ export const datas = [
       "Đa năng Son lót, son dưỡng, mặt nạ ngủ, bôi nẻ má",
     ],
     colors: ["Màu hồng", "Màu vàng", "Màu Xanh"],
+
     rating: 3,
     category: "Trang Điểm",
     brand: "DEGREY",
@@ -163,6 +166,7 @@ export const datas = [
       "Bổ sung Dầu Marula chống lão hóa tuyệt vời",
     ],
     colors: ["Màu hồng", "Màu vàng", "Màu Xanh"],
+
     rating: 5,
     category: "Trang Điểm",
     brand: "DEGREY",
@@ -211,6 +215,7 @@ export const datas = [
       "Bổ sung Dầu Marula chống lão hóa tuyệt vời",
     ],
     colors: ["Màu hồng", "Màu vàng", "Màu Tím"],
+
     rating: 4.5,
     category: "Da",
     brand: "DEGREY",
@@ -258,6 +263,7 @@ export const datas = [
       "Bổ sung Dầu Marula chống lão hóa tuyệt vời",
     ],
     colors: ["Màu hồng", "Màu vàng", "Màu Tím"],
+
     rating: 4,
     category: "Da",
     brand: "DEGREY",
@@ -305,6 +311,7 @@ export const datas = [
       "hông chứa sulfate, paraben, silicone, hương liệu hóa học",
     ],
     colors: ["Màu hồng", "Màu Tím"],
+
     rating: 5,
     category: "Da",
     brand: "ClownZ",
@@ -351,6 +358,7 @@ export const datas = [
       "hông chứa sulfate, paraben, silicone, hương liệu hóa học",
     ],
     colors: ["Màu Vàng", "Màu Đỏ"],
+
     rating: 2.5,
     category: "Da",
     brand: "ClownZ",
@@ -399,6 +407,7 @@ export const datas = [
       "hông chứa sulfate, paraben, silicone, hương liệu hóa học",
     ],
     colors: ["Màu Vàng", "Màu Đen"],
+
     rating: 5,
     category: "Cơ thể",
     brand: "ClownZ",
@@ -446,6 +455,7 @@ export const datas = [
       "hông chứa sulfate, paraben, silicone, hương liệu hóa học",
     ],
     colors: ["Màu Đen", "Màu Đỏ", "Màu Hồng", "Màu Vàng"],
+
     rating: 3,
     category: "Cơ thể",
     brand: "ClownZ",
@@ -493,6 +503,7 @@ export const datas = [
       "hông chứa sulfate, paraben, silicone, hương liệu hóa học",
     ],
     colors: ["Màu Đen", "Màu Đỏ", "Màu Hồng", "Màu Vàng"],
+
     rating: 4,
     category: "Cơ thể",
     brand: "Ssstutter",
@@ -540,6 +551,7 @@ export const datas = [
       "hông chứa sulfate, paraben, silicone, hương liệu hóa học",
     ],
     colors: ["Màu Đen", "Màu Đỏ", "Màu Hồng", "Màu Vàng"],
+
     rating: 4.5,
     category: "Cơ thể",
     brand: "Ssstutter",
@@ -588,6 +600,7 @@ export const datas = [
       "hông chứa sulfate, paraben, silicone, hương liệu hóa học",
     ],
     colors: ["Màu Vàng", "Màu Đen"],
+
     rating: 1,
     category: "Hương thơm",
     brand: "Ssstutter",
@@ -635,6 +648,7 @@ export const datas = [
       "hông chứa sulfate, paraben, silicone, hương liệu hóa học",
     ],
     colors: ["Màu Đen", "Màu Đỏ", "Màu Vàng"],
+
     rating: 4,
     category: "Hương thơm",
     brand: "Vascara",
@@ -682,6 +696,7 @@ export const datas = [
       "hông chứa sulfate, paraben, silicone, hương liệu hóa học",
     ],
     colors: ["Màu Đen", "Màu Đỏ"],
+
     rating: 4.5,
     category: "Hương thơm",
     brand: "Vascara",
@@ -729,6 +744,7 @@ export const datas = [
       "hông chứa sulfate, paraben, silicone, hương liệu hóa học",
     ],
     colors: ["Màu Đen", "Màu Vàng"],
+
     rating: 5,
     category: "Hương thơm",
     brand: "Vascara",
@@ -777,6 +793,7 @@ export const datas = [
       "hông chứa sulfate, paraben, silicone, hương liệu hóa học",
     ],
     colors: ["Màu Vàng", "Màu Vàng"],
+
     rating: 5,
     category: "Quà tặng",
     brand: "Vascara",
@@ -824,6 +841,7 @@ export const datas = [
       "hông chứa sulfate, paraben, silicone, hương liệu hóa học",
     ],
     colors: ["Màu Vàng", "Màu Đen"],
+
     rating: 5,
     category: "Quà tặng",
     brand: "Vascara",
@@ -871,6 +889,7 @@ export const datas = [
       "hông chứa sulfate, paraben, silicone, hương liệu hóa học",
     ],
     colors: ["Màu Vàng", "Màu Hồng"],
+
     rating: 4,
     category: "Quà tặng",
     brand: "Adidas",
@@ -918,6 +937,7 @@ export const datas = [
       "hông chứa sulfate, paraben, silicone, hương liệu hóa học",
     ],
     colors: ["Màu Vàng", "Màu Đen"],
+
     rating: 5,
     category: "Quà tặng",
     brand: "Adidas",
@@ -967,6 +987,7 @@ export const datas = [
       "hông chứa sulfate, paraben, silicone, hương liệu hóa học",
     ],
     colors: ["Màu Vàng"],
+
     rating: 4,
     category: "Khác",
     brand: "Adidas",
@@ -1015,6 +1036,7 @@ export const datas = [
       "hông chứa sulfate, paraben, silicone, hương liệu hóa học",
     ],
     colors: ["Màu Vàng"],
+
     rating: 5,
     category: "Khác",
     brand: "Adidas",
@@ -1063,6 +1085,7 @@ export const datas = [
       "hông chứa sulfate, paraben, silicone, hương liệu hóa học",
     ],
     colors: ["Màu Vàng"],
+
     rating: 5,
     category: "Khác",
     brand: "Adidas",
@@ -1110,6 +1133,7 @@ export const datas = [
       "hông chứa sulfate, paraben, silicone, hương liệu hóa học",
     ],
     colors: ["Màu Vàng"],
+
     rating: 5,
     category: "Khác",
     brand: "Adidas",

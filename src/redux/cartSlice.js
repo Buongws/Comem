@@ -1,11 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 import { datas } from "../assets/data/data";
+import CartItem from "../components/CartPage/CartItem";
+import { toast } from "react-toastify";
 
 const initialState = {
-  cartItems: [],
-  amount: 10,
+  cartItems: localStorage.getItem("cartItems") ? JSON.parse(localStorage.getItem("cartItems")) : [],
+  originalDatas: datas,
+  amount: 0,
   total: 0,
+  quantity: 0,
   opensiderBarContent: false,
 };
 
@@ -16,16 +20,69 @@ const cartSlice = createSlice({
     toggleSideBarOpen(state, action) {
       state.opensiderBarContent = state.opensiderBarContent === false ? true : false;
     },
-    addToCart(state, action) {
-      const tempItem = state.cartItems.findIndex((i) => i.id === action.payload.id);
 
-      if (tempItem >= 0) {
-        state.cartItems[tempItem].cartQuantity += 1;
+    addToCart(state, action) {
+      let isExistID = state.cartItems.findIndex(
+        (item) => item.id === action.payload.id && item.colors === action.payload.colors
+      );
+
+      const tempItem = state.originalDatas.filter((item) => item.id === action.payload.id)[0];
+
+      if (isExistID >= 0) {
+        state.cartItems[isExistID].amount += action.payload.amount;
+
+        toast.info("Tăng số lượng sản phẩm ", {
+          position: "bottom-left",
+        });
       } else {
-        console.log(tempItem);
-        const tempProduct = { ...action.payload, cartQuantity: 1 };
+        const tempProduct = {
+          ...tempItem,
+          amount: action.payload.amount,
+          colors: action.payload.colors,
+        };
+        console.log(tempProduct);
         state.cartItems.push(tempProduct);
+
+        toast.success(`${action.payload.name} đã được thêm vào giỏ hàng`, {
+          position: "bottom-left",
+        });
       }
+      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
+    },
+
+    removeItem(state, action) {
+      const itemID = action.payload.id;
+      const itemcolors = action.payload.id;
+
+      console.log(itemID, itemcolors);
+      state.cartItems = state.cartItems.filter((item) => item.id !== itemID);
+
+      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
+      toast.info(" Đã xóa sản phẩm khỏi giỏ hàng ", {
+        position: "bottom-left",
+      });
+    },
+    increase: (state, { payload }) => {
+      const cartItem = state.cartItems.find((item) => item.id === payload.id);
+
+      cartItem.amount = cartItem.amount + 1;
+    },
+    decrease: (state, { payload }) => {
+      const cartItem = state.cartItems.find((item) => item.id === payload.id);
+      cartItem.amount = cartItem.amount - 1;
+    },
+
+    calculateTotals: (state) => {
+      let quantity = 0;
+      let total = 0;
+
+      state.cartItems.forEach((item) => {
+        quantity += item.amount;
+        total += item.amount * item.price;
+      });
+
+      state.quantity = quantity;
+      state.total = total;
     },
   },
 });

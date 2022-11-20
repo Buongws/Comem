@@ -11,7 +11,7 @@ import { links } from "../../assets/data/links";
 const Header = () => {
   const headerRef = useRef(null);
 
-  const amount = useSelector((store) => store.cart.amount);
+  // const amount = useSelector((store) => store.cart.amount);
 
   // useEffect(() => {
   //   window.addEventListener("scroll", () => {
@@ -23,7 +23,7 @@ const Header = () => {
   //   });
   // }, []);
 
-  const { opensiderBarContent } = useSelector((store) => store.cart);
+  const { opensiderBarContent, quantity } = useSelector((store) => store.cart);
 
   const dispatch = useDispatch();
 
@@ -62,7 +62,7 @@ const Header = () => {
               <span className="cart-container flex items-center relative  ">
                 <FaShoppingBag className="text-white w-[28px] h-[28px]" />
                 <span className="cart-value absolute top-[-16px] right-[-18px] w-[16px] h-[16px] flex items-center justify-center bg-orange-300 rounded-full p-[15px] text-xs  text-white">
-                  {amount}
+                  {quantity}
                 </span>
               </span>
             </Link>

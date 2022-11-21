@@ -15,7 +15,7 @@ const AmountButtons = ({ id, amount, colors }) => {
         type="button"
         onClick={() => {
           if (amount === 1) {
-            dispatch(cartSliceAction.removeItem(id, colors));
+            dispatch(cartSliceAction.removeItem(id));
           }
           dispatch(cartSliceAction.decrease({ id }));
         }}

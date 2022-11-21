@@ -39,11 +39,12 @@ const cartSlice = createSlice({
           ...tempItem,
           amount: action.payload.amount,
           colors: action.payload.colors,
+          id: action.payload.id + action.payload.colors,
         };
         console.log(tempProduct);
         state.cartItems.push(tempProduct);
 
-        toast.success(`${action.payload.name} đã được thêm vào giỏ hàng`, {
+        toast.success(`Đã thêm sản phẩm vào giỏ hàng`, {
           position: "bottom-left",
         });
       }
@@ -51,10 +52,8 @@ const cartSlice = createSlice({
     },
 
     removeItem(state, action) {
-      const itemID = action.payload.id;
-      const itemcolors = action.payload.id;
+      const itemID = action.payload;
 
-      console.log(itemID, itemcolors);
       state.cartItems = state.cartItems.filter((item) => item.id !== itemID);
 
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
@@ -69,7 +68,9 @@ const cartSlice = createSlice({
     },
     decrease: (state, { payload }) => {
       const cartItem = state.cartItems.find((item) => item.id === payload.id);
-      cartItem.amount = cartItem.amount - 1;
+      if (cartItem >= 1) {
+        cartItem.amount = cartItem.amount - 1;
+      }
     },
 
     calculateTotals: (state) => {

@@ -113,7 +113,13 @@ a {
   height: 3px;
   transition: 300ms;
 }
-
+.bg-login {
+  background-image: url(./assets/image/background-login.jpg);
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+}
 .nav-link-ltr::before {
   bottom: 10px;
   width: 0%;

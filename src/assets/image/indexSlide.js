@@ -23,6 +23,7 @@ import source9 from "./source-9.png";
 import bgProduct from "./bg-product.jpg";
 import bgSideBar from "./bg-sidebar.jpg";
 import bgEmpty from "./bg-empty-cart.jpg";
+import bgLogin from "./background-login.jpg";
 
 export {
   Slide1,
@@ -49,4 +50,5 @@ export {
   bgProduct,
   bgSideBar,
   bgEmpty,
+  bgLogin,
 };

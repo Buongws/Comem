@@ -64,12 +64,12 @@ const AmountButtonSinglePage = ({ id, colors }) => {
         <button type="button" onClick={onClickIncreasementButton}>
           <FaPlus />
         </button>
-        <button onClick={handleAddToCart}>
-          <Link to="/cart" className="btn mt-[30px] mb-[30px]">
-            Thêm Vào Giỏ
-          </Link>
-        </button>
       </main>
+      <button onClick={handleAddToCart}>
+        <Link to="/cart" className="btn mt-[30px] mb-[30px]">
+          Thêm Vào Giỏ
+        </Link>
+      </button>
     </div>
   );
 };

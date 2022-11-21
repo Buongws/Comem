@@ -66,9 +66,11 @@ const Header = () => {
                 </span>
               </span>
             </Link>
-            <button type="button" className="mr-[30px] ">
-              <FaUser className="text-white w-[28px] h-[28px] " />
-            </button>
+            <Link to="/login">
+              <button type="button" className="mr-[30px] ">
+                <FaUser className="text-white w-[28px] h-[28px] " />
+              </button>
+            </Link>
             <button
               className={`hidden max-xl:block ${opensiderBarContent ? "max-lg:block" : "hidden"}`}
               onClick={onToggleChangeSideBar}

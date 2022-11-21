@@ -5,17 +5,6 @@ import "slick-carousel/slick/slick-theme.css";
 import { datas } from "../../assets/data/data";
 import { Link } from "react-router-dom";
 import { formatPrice } from "../../utils/Help";
-import {
-  source1,
-  source2,
-  source3,
-  source4,
-  source5,
-  source6,
-  source7,
-  source8,
-  source9,
-} from "../../assets/image/indexSlide";
 
 const Material = ({ thumbnails }) => {
   const { material } = thumbnails;

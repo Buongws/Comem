@@ -10,6 +10,7 @@ import {
   LoginPage,
   SingleProducts,
 } from "../pages/index";
+import RegisterPage from "../pages/RegisterPage";
 
 const Routers = () => {
   return (
@@ -18,6 +19,7 @@ const Routers = () => {
       <Route path="cart" element={<CartPage />} />
       <Route path="about" element={<AboutPage />} />
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/register" element={<RegisterPage />} />
       <Route path="/products" element={<ProductsPage />} />
       <Route path="products/:id" element={<SingleProducts />} />
       <Route path="*" element={<Errorpage />} />

@@ -7,9 +7,12 @@ import { cartSliceAction } from "../../redux/cartSlice";
 import { formatPrice } from "../../utils/Help";
 
 const CartTotal = () => {
-  const { amount, cartItems, total } = useSelector((state) => state.cart);
+  const { amount, cartItems, total, fee } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
+  const clearCartButton = () => {
+    dispatch(cartSliceAction.clearCart());
+  };
   return (
     <>
       {cartItems.length === 0 ? (
@@ -18,21 +21,37 @@ const CartTotal = () => {
         <div className="pt-[3rem] pb-[3rem] container-big">
           <hr />
           <div className="flex justify-between mt-[2rem]">
-            <div className="p-[20px] text-[white] bg-[#e67e22] rounded-lg hover:bg-[#d26e16] transition-all delay-100 ease-in-out">
-              <Link to="/products">Tiếp tục mua hàng</Link>
-            </div>
+            <Link
+              to="/products"
+              className="p-[20px] text-[white] bg-[#e67e22] rounded-lg hover:bg-[#d26e16] transition-all delay-100 ease-in-out"
+            >
+              Tiếp tục mua hàng
+            </Link>
             <div className="">
-              <button className="text-[#738136] p-[20px] bg-[#e7edd7] hover:bg-[#aab966] rounded-lg hover:text-white transition-all delay-100 ease-in-out">
+              <button
+                onClick={clearCartButton}
+                className="text-[#738136] p-[20px] bg-[#e7edd7] hover:bg-[#aab966] rounded-lg hover:text-white transition-all delay-100 ease-in-out"
+              >
                 Xóa giỏ hàng
               </button>
             </div>
           </div>
           <div className="flex justify-end pt-[3rem]">
             <article className="pt-[2rem] pb-[2rem] pr-[4rem] pl-[4rem] border">
-              <h4>Tổng giá trị đơn: {formatPrice(total)}</h4>
-              <h5 className="pb-[10px]"> Phí giao hàng: </h5>
+              <h4 className="pt-[1rem] pb-[1rem] text-[25px]">
+                Tổng giá trị đơn: <span className="font-bold pl-[1rem]">{formatPrice(total)}</span>
+              </h4>
+              <h5 className="pb-[10px] text-[25px]">
+                {" "}
+                Phí giao hàng: <span className="font-bold pl-[1rem]">{formatPrice(fee)}</span>
+              </h5>
               <hr />
-              <button className="pt-[10px] pb-[10px]">Thanh Toán </button>
+              <button className="pt-[20px] pb-[10px] text-[18px]">
+                Tổng thanh toán:{" "}
+                <span className="pl-[1rem] font-bold text-[30px] text-[#e67e22]">
+                  {formatPrice(total + fee)}
+                </span>
+              </button>
             </article>
           </div>
         </div>

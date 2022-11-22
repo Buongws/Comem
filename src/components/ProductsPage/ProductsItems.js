@@ -5,12 +5,14 @@ const ProductsItems = ({ image, name, price, id }) => {
   return (
     <div className="card transition-all border-solid border-[1px] rounded-[10px] hover:shadow-lg  flex flex-col">
       <div className="mb-[10%] overflow-hidden ">
-        <img
-          src={image[0]}
-          alt={name}
-          className="hover:scale-[110%] transition 
+        <Link to={`/products/${id}`}>
+          <img
+            src={image[0]}
+            alt={name}
+            className="hover:scale-[110%] transition 
           delay-75 duration-300  ease-in-out w-full"
-        />
+          />
+        </Link>
       </div>
       <div className="p-[20px] flex flex-1 flex-col justify-between">
         <Link

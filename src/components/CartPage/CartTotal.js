@@ -47,11 +47,12 @@ const CartTotal = () => {
               </h5>
               <hr />
               <button className="pt-[20px] pb-[10px] text-[18px]">
-                Tổng thanh toán:{" "}
+                Tổng thanh toán:
                 <span className="pl-[1rem] font-bold text-[30px] text-[#e67e22]">
                   {formatPrice(total + fee)}
                 </span>
               </button>
+              {}
             </article>
           </div>
         </div>

@@ -11,9 +11,7 @@ const Footer = () => {
           <div className="footer-main grid gap-10 grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1">
             <div className="footer-content  mr-[15px]">
               <div>
-                <h5 className="pb-[5px] uppercase font-bold text-white">
-                  Về Cỏ Mềm
-                </h5>
+                <h5 className="pb-[5px] uppercase font-bold text-white">Về Cỏ Mềm</h5>
                 <ul>
                   <li>
                     <a href="/">Chuyện của Cỏ</a>
@@ -26,9 +24,7 @@ const Footer = () => {
             </div>
             <div className="footer-content  mr-[15px]">
               <div>
-                <h5 className="pb-[5px] uppercase font-bold text-white">
-                  Hoạt động cộng đồng
-                </h5>
+                <h5 className="pb-[5px] uppercase font-bold text-white">Hoạt động cộng đồng</h5>
                 <ul>
                   <li>
                     <a href="/">Xây trường cho trẻ em</a>
@@ -44,9 +40,7 @@ const Footer = () => {
             </div>
             <div className="footer-content  mr-[15px]">
               <div>
-                <h5 className="pb-[5px] uppercase font-bold text-white">
-                  Hướng Dẫn Mua Hàng
-                </h5>
+                <h5 className="pb-[5px] uppercase font-bold text-white">Hướng Dẫn Mua Hàng</h5>
                 <ul>
                   <li>
                     <a href="/">Chính sách mua hàng và thanh toán</a>
@@ -65,9 +59,7 @@ const Footer = () => {
             </div>
             <div className="footer-content  mr-[15px]">
               <div>
-                <h5 className="pb-[5px] uppercase font-bold text-white">
-                  Thông tin liên hệ
-                </h5>
+                <h5 className="pb-[5px] uppercase font-bold text-white">Thông tin liên hệ</h5>
                 <ul>
                   <li>
                     <a href="/">cskh@comem.vn</a>

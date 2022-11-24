@@ -9,6 +9,8 @@ import {
   CartPage,
   LoginPage,
   SingleProducts,
+  CheckOut,
+  ProtectedRouter,
 } from "../pages/index";
 import RegisterPage from "../pages/RegisterPage";
 
@@ -19,6 +21,15 @@ const Routers = () => {
       <Route path="cart" element={<CartPage />} />
       <Route path="about" element={<AboutPage />} />
       <Route path="/login" element={<LoginPage />} />
+
+      <Route
+        path="/checkout"
+        element={
+          <ProtectedRouter>
+            <CheckOut />
+          </ProtectedRouter>
+        }
+      />
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/products" element={<ProductsPage />} />
       <Route path="products/:id" element={<SingleProducts />} />

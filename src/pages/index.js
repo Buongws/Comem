@@ -10,6 +10,10 @@ import Sort from "../components/ProductsPage/Sort";
 import ProductsList from "../components/ProductsPage/ProductsList";
 import Filter from "../components/ProductsPage/Filter";
 
+import CheckOut from "../pages/CheckOutPage";
+
+import ProtectedRouter from "../routers/ProtectedRouter";
+
 export {
   Home,
   ProductsPage,
@@ -21,4 +25,6 @@ export {
   Sort,
   ProductsList,
   Filter,
+  CheckOut,
+  ProtectedRouter,
 };

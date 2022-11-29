@@ -12,6 +12,7 @@ const initialState = {
   quantity: 0,
   fee: 25000,
   opensiderBarContent: false,
+  openButtonLogInContent: false,
 };
 
 const cartSlice = createSlice({
@@ -20,6 +21,9 @@ const cartSlice = createSlice({
   reducers: {
     toggleSideBarOpen(state, action) {
       state.opensiderBarContent = state.opensiderBarContent === false ? true : false;
+    },
+    toggleButtonLogin(state, action) {
+      state.openButtonLogInContent = state.openButtonLogInContent === false ? true : false;
     },
 
     addToCart(state, action) {
@@ -35,6 +39,9 @@ const cartSlice = createSlice({
         toast.info("Tăng số lượng sản phẩm ", {
           position: "bottom-left",
         });
+        if (state.cartItems.colors === action.payload.colors) {
+          state.cartItems.amount = action.payload.amount;
+        }
       } else {
         const tempProduct = {
           ...tempItem,
@@ -69,9 +76,8 @@ const cartSlice = createSlice({
     },
     decrease: (state, { payload }) => {
       const cartItem = state.cartItems.find((item) => item.id === payload.id);
-      if (cartItem.amount <= 1) {
-        cartItem.amount = cartItem.amount - 1;
-      }
+
+      cartItem.amount = cartItem.amount - 1;
     },
 
     calculateTotals: (state) => {

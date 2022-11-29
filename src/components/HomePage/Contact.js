@@ -22,11 +22,11 @@ const Contact = () => {
             <input
               type="email"
               className="w-[60%] mr-[5%] p-[15px] rounded-xl "
-              placeholder="Enter email"
+              placeholder="Đăng kí email để nhận ưu đãi"
               name="_replyto"
             />
             <button type="submit" className="btn" name="fname">
-              Submit
+              Đăng kí
             </button>
           </form>
         </div>

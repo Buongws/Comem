@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase";
+import { auth, provider } from "../firebase";
 import { toast } from "react-toastify";
 
 import { useNavigate } from "react-router-dom";
+import { signInWithPopup } from "firebase/auth";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -14,18 +15,50 @@ const LoginPage = () => {
 
   const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     setLoading(true);
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userInfo) => {
-        setLoading(false);
-        toast.success("successfully login");
-        navigate("/");
+
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+
+      const user = userCredential.user;
+      console.log(user);
+      setLoading(false);
+      toast.success("Đăng nhập thành công", {
+        position: "bottom-left",
+      });
+      navigate("/checkout");
+    } catch (error) {
+      console.log(error.code, error.message);
+      toast.error(error.message);
+      navigate("/");
+    }
+    // signInWithEmailAndPassword(auth, email, password)
+    //   .then((userInfo) => {
+    //     setLoading(false);
+    //     toast.success("Đăng nhập thành công", {
+    //       position: "bottom-left",
+    //     });
+    //     navigate("/");
+    //   })
+    //   .catch((error) => {
+    //     console.log(error.code, error.message);
+    //     toast.error(error.message);
+    //     navigate("/");
+    //   });
+  };
+  const handleGoogleButton = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        toast.success("Đăng nhập thành công", {
+          position: "bottom-left",
+        });
+        console.log(result);
+        // navigate("/");
       })
       .catch((error) => {
-        console.log(error.code, error.message);
-        toast.error(error.message);
+        console.log(error);
       });
   };
 
@@ -66,6 +99,15 @@ const LoginPage = () => {
                       className="p-[20px] text-white w-[80%] bg-[#738136] text-center hover:bg-[#68762b] rounded-md trasition ease-in-out delay-100 "
                     >
                       Đăng Nhập
+                    </button>
+                  </div>
+                  <div className="flex flex-col justify-center items-center mt-[30px]">
+                    <button
+                      onClick={handleGoogleButton}
+                      type="submit"
+                      className="p-[20px] text-white w-[80%] bg-[#4363c9] text-center hover:bg-[#68762b] rounded-md trasition ease-in-out delay-100 "
+                    >
+                      Đăng nhập với Google
                     </button>
                   </div>
                   <h5 className="text-[16px] pt-[1.5rem]">

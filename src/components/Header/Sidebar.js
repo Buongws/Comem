@@ -8,6 +8,7 @@ import { cartSliceAction } from "../../redux/cartSlice";
 import { bgSideBar } from "../../assets/image/indexSlide";
 import { FaShoppingBag, FaUser, FaBars } from "react-icons/fa";
 import cn from "classnames";
+
 const Sidebar = () => {
   const { opensiderBarContent, amount } = useSelector((store) => store.cart);
 
@@ -81,7 +82,9 @@ const Sidebar = () => {
                 </span>
               </Link>
               <button type="button" className="mr-[30px]" onClick={onToggleChangeSideBar}>
-                <FaUser className="text-white w-[28px] h-[28px] " />
+                <Link to="/cart">
+                  <FaUser className="text-white w-[28px] h-[28px] " />
+                </Link>
               </button>
             </div>
           </ul>

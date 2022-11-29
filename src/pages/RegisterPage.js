@@ -21,7 +21,7 @@ import { async } from "@firebase/util";
 const RegisterPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [userName, setUserName] = useState("");
+  const [username, setUserName] = useState("");
   const [file, setFile] = useState(null);
   // const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false);
@@ -31,11 +31,12 @@ const RegisterPage = () => {
   const register = async (e) => {
     e.preventDefault();
     setLoading(true);
+
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      const user = userCredential.user;
+      const user = await userCredential.user;
 
-      const storageRef = ref(storage, `images/${Date.now() + userName}`);
+      const storageRef = ref(storage, `images/${Date.now() + username}`);
       const uploadTask = uploadBytesResumable(storageRef, file);
 
       uploadTask.on(
@@ -47,14 +48,14 @@ const RegisterPage = () => {
             console.log(downloadURL);
             // update userProfile
             await updateProfile(user, {
-              displayName: userName,
+              displayName: username,
               photoURL: downloadURL,
             });
 
             // Store user data in firestore database
             await setDoc(doc(db, "users", user.uid), {
               uid: user.uid,
-              displayName: userName,
+              displayName: username,
               email,
               photoURL: downloadURL,
             });
@@ -63,12 +64,14 @@ const RegisterPage = () => {
       );
 
       setLoading(false);
-      toast.success("Account created");
+
+      toast.success("Tài khoản đã được tạo");
+
       navigate("/login");
       console.log(user);
     } catch (error) {
       setLoading(false);
-      toast.error("something went wrong");
+      toast.error("Có gì đó lầm nhẫn");
     }
   };
 
@@ -97,7 +100,7 @@ const RegisterPage = () => {
                   <input
                     placeholder="Họ Tên"
                     type="text"
-                    value={userName}
+                    value={username}
                     onChange={(e) => setUserName(e.target.value)}
                     className="w-full h-[56px] outline-0 p-[10px] border-2 rounded-md"
                   ></input>

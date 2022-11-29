@@ -25,6 +25,10 @@ import bgSideBar from "./bg-sidebar.jpg";
 import bgEmpty from "./bg-empty-cart.jpg";
 import bgLogin from "./background-login.jpg";
 
+import userIcon from "./user.png";
+
+import cardCheckOut from "./card_img.png";
+
 export {
   Slide1,
   Slide2,
@@ -51,4 +55,6 @@ export {
   bgSideBar,
   bgEmpty,
   bgLogin,
+  userIcon,
+  cardCheckOut,
 };

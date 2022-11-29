@@ -6,10 +6,12 @@ import { useDispatch } from "react-redux";
 import { cartSliceAction } from "../../redux/cartSlice";
 import { formatPrice } from "../../utils/Help";
 
+import useAuth from "../../custom-hooks/useAuth";
+
 const CartTotal = () => {
   const { amount, cartItems, total, fee } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-
+  const { currentUser } = useAuth();
   const clearCartButton = () => {
     dispatch(cartSliceAction.clearCart());
   };
@@ -46,13 +48,19 @@ const CartTotal = () => {
                 Phí giao hàng: <span className="font-bold pl-[1rem]">{formatPrice(fee)}</span>
               </h5>
               <hr />
-              <button className="pt-[20px] pb-[10px] text-[18px]">
+              <div className="pt-[20px] pb-[10px] text-[18px]">
                 Tổng thanh toán:
                 <span className="pl-[1rem] font-bold text-[30px] text-[#e67e22]">
                   {formatPrice(total + fee)}
                 </span>
-              </button>
-              {}
+              </div>
+              <div className="pl-[1rem] font-bold text-[30px] text-center">
+                <button>
+                  <Link to={`/${currentUser ? "checkout" : "login"}`} className="btn">
+                    {currentUser ? "Thanh Toán" : "Đăng nhập để thanh toán"}
+                  </Link>
+                </button>
+              </div>
             </article>
           </div>
         </div>

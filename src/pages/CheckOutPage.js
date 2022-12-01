@@ -20,7 +20,6 @@ const CheckOutPage = () => {
 
   const handdleSubmitCheckOut = (e) => {
     e.preventDefault();
-    toast.success("Thanh Toán Thành công");
   };
 
   const handdleChange = (e) => {
@@ -115,6 +114,7 @@ const CheckOutPage = () => {
               <div className="mt-[15px] mb-[20px]">
                 <span className="mb-[15px] mt-[15px] block">Tên chủ thẻ: </span>
                 <input
+                  name="nameCard"
                   onChange={handdleChange}
                   value={formValues.nameCard}
                   className=" outline-none border-2 solid h-[40px] w-full p-[10px]"
@@ -125,6 +125,7 @@ const CheckOutPage = () => {
               <div className="mt-[15px] mb-[20px]">
                 <span className="mb-[15px] mt-[15px] block">Số thẻ tín dụng :</span>
                 <input
+                  name="numCard"
                   onChange={handdleChange}
                   value={formValues.NumCard}
                   className=" outline-none border-2 solid h-[40px] w-full p-[10px]"
@@ -144,6 +145,7 @@ const CheckOutPage = () => {
                 <div className="mr-[10px]">
                   <span>Exp year :</span>
                   <input
+                    name="expYear"
                     onChange={handdleChange}
                     value={formValues.yearCard}
                     className="outline-none border-2 solid h-[40px] w-[100%] p-[10px]"
@@ -154,6 +156,7 @@ const CheckOutPage = () => {
                 <div>
                   <span>CVV :</span>
                   <input
+                    name="CVV"
                     onChange={handdleChange}
                     value={formValues.CVV}
                     className="outline-none border-2 solid h-[40px] w-[100%] p-[10px]"

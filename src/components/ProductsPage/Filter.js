@@ -9,7 +9,7 @@ const Filter = () => {
   const { originalData, filteredProducts, filters } = useSelector((store) => store.filter);
 
   const { text, category, brand, colors, min_price, max_price, price, bestSeller } = filters;
-  console.log(max_price, min_price);
+
   const dispatch = useDispatch();
 
   const updateText = (e) => {

@@ -8,8 +8,6 @@ import CartItem from "./CartItem";
 const CartContent = () => {
   const { cartItems, amount } = useSelector((store) => store.cart);
 
-  console.log(cartItems);
-
   return (
     <>
       {cartItems.length === 0 ? (

@@ -5,7 +5,6 @@ import { useDispatch } from "react-redux";
 import { cartSliceAction } from "../../redux/cartSlice";
 import { AiFillDelete } from "react-icons/ai";
 const CartItem = ({ id, image, name, colors, price, amount }) => {
-  console.log(colors);
   const dispatch = useDispatch();
 
   return (

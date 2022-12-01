@@ -14,10 +14,10 @@ const AmountButtons = ({ id, amount, colors }) => {
       <button
         type="button"
         onClick={() => {
-          if (amount === 1) {
-            dispatch(cartSliceAction.removeItem(id));
-          }
-          dispatch(cartSliceAction.decrease({ id }));
+          // if (amount === 1) {
+          //   return dispatch(cartSliceAction.removeItem({ id, colors }));
+          // }
+          dispatch(cartSliceAction.removeItem({ id, colors, amount }));
         }}
       >
         <FaMinus />

@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 
 import { datas } from "../assets/data/data";
 import CartItem from "../components/CartPage/CartItem";
@@ -39,15 +39,12 @@ const cartSlice = createSlice({
         toast.info("Tăng số lượng sản phẩm ", {
           position: "bottom-left",
         });
-        if (state.cartItems.colors === action.payload.colors) {
-          state.cartItems.amount = action.payload.amount;
-        }
       } else {
         const tempProduct = {
           ...tempItem,
           amount: action.payload.amount,
           colors: action.payload.colors,
-          id: action.payload.id + action.payload.colors,
+          id: action.payload.id,
         };
         console.log(tempProduct);
         state.cartItems.push(tempProduct);
@@ -60,11 +57,46 @@ const cartSlice = createSlice({
     },
 
     removeItem(state, action) {
-      const itemID = action.payload;
+      const { id, colors, amount } = action.payload;
+      // console.log(id, colors);
 
-      state.cartItems = state.cartItems.filter((item) => item.id !== itemID);
+      // if (amount > 1) {
+      //   const findItem = state.cartItems.filter(
+      //     (item) => item.id !== id || (item.id === id && item.colors !== colors)
+      //   );
+      //   const indexItems = state.cartItems.findIndex(
+      //     (item) => item.id === id && item.colors === colors
+      //   );
+
+      //   if (findItem.amount > 1) {
+      //     state.cartItems[indexItems].amount = state.cartItems[indexItems].amount - 1;
+      //   } else {
+      //     state.cartItems[indexItems].splice(indexItems, 1);
+      //   }
+      // }
+
+      // console.log(state.cartItems[indexItems].amount);
+
+      // console.log(state.cartItems, indexItems);
+
+      const cartItemIndex = state.cartItems.findIndex(
+        (item) => item.id === id && item.colors === colors
+      );
+      if (amount !== 1) {
+        console.log(cartItemIndex);
+
+        state.cartItems[cartItemIndex].amount = state.cartItems[cartItemIndex].amount - 1;
+        // cartItemIndex.amount = cartItemIndex.amount - 1;
+        localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
+      } else {
+        // state.cartItems = state.cartItems.filter(
+        //   (item) => item.id !== id || (item.id === id && item.colors !== colors)
+        // );
+        state.cartItems.splice(cartItemIndex, 1);
+      }
 
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
+
       toast.info(" Đã xóa sản phẩm khỏi giỏ hàng ", {
         position: "bottom-left",
       });
@@ -73,11 +105,6 @@ const cartSlice = createSlice({
       const cartItem = state.cartItems.find((item) => item.id === payload.id);
 
       cartItem.amount = cartItem.amount + 1;
-    },
-    decrease: (state, { payload }) => {
-      const cartItem = state.cartItems.find((item) => item.id === payload.id);
-
-      cartItem.amount = cartItem.amount - 1;
     },
 
     calculateTotals: (state) => {

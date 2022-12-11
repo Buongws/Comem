@@ -1,12 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import {
-  createUserWithEmailAndPassword,
-  sendEmailVerification,
-  updateProfile,
-} from "firebase/auth";
-
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { setDoc, doc } from "firebase/firestore";
 
@@ -16,63 +11,126 @@ import { toast } from "react-toastify";
 import { db } from "../firebase";
 
 import { useNavigate } from "react-router-dom";
-import { async } from "@firebase/util";
 
 const RegisterPage = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [username, setUserName] = useState("");
+  const [user, setUser] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+  const [errEmail, setErrorEmail] = useState("");
+  const [errPassword, setErrPassword] = useState("");
+  const [errUserName, setErrUserName] = useState("");
+  const [errFile, setErrFile] = useState("");
+
   const [file, setFile] = useState(null);
-  // const [phone, setPhone] = useState("");
+  const [backError, setBackError] = useState("");
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
 
+  const onChangeHandle = (e) => {
+    const { name, value } = e.target;
+    console.log(name + "::::::::::" + value);
+    setUser((pre) => {
+      return {
+        ...pre,
+        [name]: value,
+      };
+    });
+  };
+
   const register = async (e) => {
     e.preventDefault();
-    setLoading(true);
 
-    try {
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      const user = await userCredential.user;
-
-      const storageRef = ref(storage, `images/${Date.now() + username}`);
-      const uploadTask = uploadBytesResumable(storageRef, file);
-
-      uploadTask.on(
-        (error) => {
-          toast.error(error.message);
-        },
-        () => {
-          getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
-            console.log(downloadURL);
-            // update userProfile
-            await updateProfile(user, {
-              displayName: username,
-              photoURL: downloadURL,
-            });
-
-            // Store user data in firestore database
-            await setDoc(doc(db, "users", user.uid), {
-              uid: user.uid,
-              displayName: username,
-              email,
-              photoURL: downloadURL,
-            });
-          });
-        }
-      );
-
-      setLoading(false);
-
-      toast.success("Tài khoản đã được tạo");
-
-      navigate("/login");
-      console.log(user);
-    } catch (error) {
-      setLoading(false);
-      toast.error("Có gì đó lầm nhẫn");
+    const { email, password, username } = user;
+    if (email === "") {
+      setInterval(() => {
+        setErrorEmail("");
+      }, 5000);
+      return setErrorEmail("Hãy điền email của bạn ");
     }
+    if (!email.includes("@")) {
+      setInterval(() => {
+        setErrorEmail("");
+      }, 5000);
+      return setErrorEmail("Thiếu kí tự '@' trong email của bạn");
+    }
+
+    if (username === "") {
+      setInterval(() => {
+        setErrUserName("");
+      }, 5000);
+      return setErrUserName("Hãy điền họ tên của bạn");
+    }
+    if (password === "") {
+      setInterval(() => {
+        setErrPassword("");
+      }, 5000);
+      return setErrPassword("Hãy điền mật khẩu của bạn");
+    } else if (password.length <= 6) {
+      setInterval(() => {
+        setErrPassword("");
+      }, 5000);
+      return setErrPassword("Mật khẩu bắt buộc lớn hơn 6 kí tự");
+    } else if (!file) {
+      setInterval(() => {
+        setErrFile("");
+      }, 5000);
+      return setErrFile("Hãy upload ảnh đại diện của bạn");
+    } else {
+      toast.success("Dang ki thanh cong", {
+        position: "bottom-left",
+      });
+      setUser({
+        username: "",
+        email: "",
+        password: "",
+        file: null,
+      });
+    }
+
+    // try {
+    //   const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    //   const user = userCredential.user;
+
+    //   const storageRef = ref(storage, `images/${Date.now() + username}`);
+    //   const uploadTask = uploadBytesResumable(storageRef, file);
+
+    //   uploadTask.on(
+    //     (error) => {
+    //       toast.error(error.message);
+    //     },
+    //     () => {
+    //       getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
+    //         console.log(downloadURL);
+    //         // update userProfile
+    //         await updateProfile(user, {
+    //           displayName: username,
+    //           photoURL: downloadURL,
+    //         });
+
+    //         // Store user data in firestore database
+    //         await setDoc(doc(db, "users", user.uid), {
+    //           uid: user.uid,
+    //           displayName: username,
+    //           email,
+    //           photoURL: downloadURL,
+    //         });
+    //       });
+    //     }
+    //   );
+
+    //   setLoading(false);
+
+    //   toast.success("Tài khoản đã được tạo");
+
+    //   navigate("/login");
+    //   console.log(user);
+    // } catch (error) {
+    //   setLoading(false);
+    //   toast.error("Có gì đó lầm nhẫn");
+    // }
   };
 
   return (
@@ -90,45 +148,65 @@ const RegisterPage = () => {
                 <div className="mb-[25px]">
                   <input
                     placeholder="Email của bạn"
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    type="text"
+                    name="email"
+                    value={user.email}
+                    onChange={onChangeHandle}
                     className="w-full h-[56px] outline-0 p-[10px] border-2 rounded-md"
                   ></input>
+                  {errEmail
+                    ? errEmail && (
+                        <p className="text-[red] text-center font-semibold pt-[1rem]">{errEmail}</p>
+                      )
+                    : backError && <p className="error">{backError}</p>}
                 </div>
                 <div className="mb-[25px]">
                   <input
                     placeholder="Họ Tên"
                     type="text"
-                    value={username}
-                    onChange={(e) => setUserName(e.target.value)}
+                    name="username"
+                    value={user.username}
+                    onChange={onChangeHandle}
                     className="w-full h-[56px] outline-0 p-[10px] border-2 rounded-md"
                   ></input>
+                  {errUserName
+                    ? errUserName && (
+                        <p className="text-[red] text-center font-semibold pt-[1rem]">
+                          {errUserName}
+                        </p>
+                      )
+                    : backError && <p className="error">{backError}</p>}
                 </div>
-                {/* <div className="mb-[25px]">
-                 <input
-                   placeholder="Số Điện Thoại"
-                   type="text"
-                   value={phone}
-                   onChange={(e) => setPhone(e.target.value)}
-                   className="w-full h-[56px] outline-0 p-[10px] border-2 rounded-md"
-                 ></input>
-               </div> */}
+
                 <div className="mb-[25px]">
                   <input
                     placeholder="Nhập mật khẩu"
                     type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    name="password"
+                    value={user.password}
+                    onChange={onChangeHandle}
                     className="w-full h-[56px] outline-0 border-2 p-[10px] rounded-md"
                   ></input>
+                  {errPassword
+                    ? errPassword && (
+                        <p className="text-[red] text-center font-semibold pt-[1rem]">
+                          {errPassword}
+                        </p>
+                      )
+                    : backError && <p className="error">{backError}</p>}
                 </div>
+
                 <div className="mb-[25px]">
                   <input
                     type="file"
                     onChange={(e) => setFile(e.target.files[0])}
                     className="w-full h-[56px] outline-0 border-2 p-[10px] rounded-md"
                   ></input>
+                  {errFile
+                    ? errFile && (
+                        <p className="text-[red] text-center font-semibold pt-[1rem]">{errFile}</p>
+                      )
+                    : backError && <p className="error">{backError}</p>}
                 </div>
                 <div className="flex flex-col justify-center items-center">
                   <button

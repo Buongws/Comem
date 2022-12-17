@@ -24,7 +24,7 @@ const Validation = (values) => {
   if (!values.nameCard) {
     errors.nameCard = "Tên chủ thẻ không được để trống";
   }
-  if (!values.NumCard) {
+  if (!values.numCard) {
     errors.NumCard = "Số thẻ thanh toán không được để trống";
   }
   if (!values.zipCode) {
@@ -32,6 +32,8 @@ const Validation = (values) => {
   }
   if (!values.yearCard) {
     errors.yearCard = "Năm sử dụng không được để trống";
+  } else if (values.yearCard.length > 4) {
+    errors.yearCard = "Nam su dung phai dung dinh dang";
   }
   if (!values.CVV) {
     errors.CVV = "CVV không được để trống";

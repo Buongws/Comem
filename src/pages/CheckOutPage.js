@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { cardCheckOut } from "../assets/image/indexSlide";
 import { months } from "../assets/data/month";
 import { toast } from "react-toastify";
-
+import { collection, addDoc } from "firebase/firestore";
 import Validation from "../custom-hooks/Validation";
 const CheckOutPage = () => {
   const initialValues = {
@@ -13,7 +13,7 @@ const CheckOutPage = () => {
     state: "",
     zipCode: "",
     nameCard: "",
-    NumCard: "",
+    numCard: "",
     yearCard: "",
     CVV: "",
   };
@@ -69,7 +69,7 @@ const CheckOutPage = () => {
                   onChange={handdleChange}
                   value={formValues.email}
                   className=" outline-none border-2 solid h-[40px] w-full p-[10px]"
-                  type="email"
+                  type="text"
                   placeholder="abc@gmail.com"
                 ></input>
               </div>
@@ -150,7 +150,7 @@ const CheckOutPage = () => {
                   onChange={handdleChange}
                   value={formValues.NumCard}
                   className=" outline-none border-2 solid h-[40px] w-full p-[10px]"
-                  type="number"
+                  type="text"
                   placeholder="1111-2222-3333-4444"
                 ></input>
               </div>
@@ -167,11 +167,11 @@ const CheckOutPage = () => {
                 <div className="mr-[10px]">
                   <span>Exp year :</span>
                   <input
-                    name="expYear"
+                    name="yearCard"
                     onChange={handdleChange}
                     value={formValues.yearCard}
                     className="outline-none border-2 solid h-[40px] w-[100%] p-[10px]"
-                    type="number"
+                    type="text"
                     placeholder="2022"
                   ></input>
                   <p className="text-[red] pt-[5px] pb-[5px]">{formErrors.yearCard}</p>

@@ -188,9 +188,3 @@ const Filter = () => {
 };
 
 export default Filter;
-
-// value = { text };
-// onChange = { updateText };
-// .map((i, index) => {
-//   return <option key={index}>{i.brand}</option>;
-// })
